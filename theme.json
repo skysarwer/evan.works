@@ -1,0 +1,229 @@
+{
+	"version": 2,
+	"settings": {
+		"blocks": {
+			"core/button": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "btn-small",
+							"size": "0.9em",
+							"name": "Small"
+						},
+						{
+							"slug": "btn-regular",
+							"size": "1.125em",
+							"name": "Normal"
+						}
+					]
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "0.8em",
+							"name": "Small"
+						},
+						{
+							"slug": "normal",
+							"size": "1em",
+							"name": "Normal"
+						},
+						{
+							"slug": "large",
+							"size": "1.25em",
+							"name": "large"
+						},
+						{
+							"slug": "extra-large",
+							"size": "1.5em",
+							"name": "Extra Large"
+						},
+						{
+							"slug": "double",
+							"size": "2em",
+							"name": "Double"
+						},
+						{
+							"slug": "triple",
+							"size": "3em",
+							"name": "Triple"
+						}
+					]
+				},
+				"spacing": {
+					"margin": true,
+					"units": ["em"]
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "0.8em",
+							"name": "Small"
+						},
+						{
+							"slug": "normal",
+							"size": "1em",
+							"name": "Normal"
+						},
+						{
+							"slug": "large",
+							"size": "1.25em",
+							"name": "large"
+						},
+						{
+							"slug": "extra-large",
+							"size": "1.5em",
+							"name": "Extra Large"
+						},
+						{
+							"slug": "double",
+							"size": "2em",
+							"name": "Double"
+						},
+						{
+							"slug": "huge",
+							"size": "2.5em",
+							"name": "Huge"
+						},
+						{
+							"slug": "triple",
+							"size": "3em",
+							"name": "Triple"
+						}
+					]
+				}
+			}
+		},
+		"color": {
+			"defaultPalette": false,
+			"custom": true,
+			"link": true,
+            "palette": [
+				{
+					"slug": "pink",
+					"color": "#ffd4d7",
+					"name": "Pink"
+				},
+				{
+					"slug": "dark-pink",
+					"color": "#E17568",
+					"name": "Dark Pink"
+				},
+                {
+					"slug": "light-green",
+					"color": "#92dcdd",
+					"name": "Light Green"
+				},
+				{
+					"slug": "dark-green",
+					"color": "#30bb9c",
+					"name": "Dark Green"
+				},
+				{
+					"slug": "purple",
+					"color": "#757494",
+					"name": "Purple"
+				},
+                {
+					"slug": "orange",
+					"color": "#e89858",
+					"name": "Orange"
+				},
+                {
+					"slug": "dark-grey",
+					"color": "#333",
+					"name": "Dark Grey"
+				},
+                {
+					"slug": "light-grey",
+					"color": "#555",
+					"name": "Light Grey"
+				},
+                {
+					"slug": "white",
+					"color": "#fff",
+					"name": "White"
+				},
+                {
+					"slug": "black",
+					"color": "#000",
+					"name": "Black"
+				}
+			]
+
+		},
+        "typography": {
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "0.8em",
+					"name": "Small"
+				},
+				{
+					"slug": "btn-small",
+					"size": "0.9em",
+					"name": "Small"
+				},
+				{
+					"slug": "normal",
+					"size": "1em",
+					"name": "Normal"
+				},
+				{
+					"slug": "btn-regular",
+					"size": "1.125em",
+					"name": "Small"
+				},
+				{
+					"slug": "large",
+					"size": "1.25em",
+					"name": "large"
+				},
+				{
+					"slug": "extra-large",
+					"size": "1.5em",
+					"name": "Extra Large"
+				},
+				{
+					"slug": "double",
+					"size": "2em",
+					"name": "Double"
+				},
+				{
+					"slug": "huge",
+					"size": "2.5em",
+					"name": "Huge"
+				},
+				{
+					"slug": "triple",
+					"size": "3em",
+					"name": "Triple"
+				},
+				{
+					"slug": "simply-huge",
+					"size": "6em",
+					"name": "Simply Huge"
+				}
+			],
+			"letterSpacing": false
+			
+		},
+
+        "spacing": {
+            "margin": true,
+            "units": ["em", "%"]
+        },
+        
+        "layout": {
+			"contentSize": "840px",
+			"wideSize": "1100px"
+		}
+
+	}
+}

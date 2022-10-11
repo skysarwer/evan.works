@@ -1,0 +1,62 @@
+ul,
+ol {
+	margin: 1.5em 1.5em;
+	padding-left: 0;
+
+	li::marker {
+		color: $color__accent;
+	}
+}
+
+ul {
+	list-style: revert;
+
+}
+
+ol {
+	list-style: decimal;
+	li::marker {
+		font-family: $font__bold;
+	}
+}
+
+ol > li > ol {
+
+	list-style: lower-alpha;
+	
+	> li {
+
+		> ol {
+			list-style: lower-roman;
+
+			> li > ol {
+				list-style: decimal;
+				li::marker {
+					font-family: $font__semibold;
+				}
+			}
+		}
+	}
+}
+
+ul > li > ul {
+	li::marker {
+		font-family: $font__bold;
+		font-size: 1.125em;
+	}
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0.25em;
+	margin-top: 0.25em;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-family: $font__bold;
+}
+
+dd {
+	margin: 1.5em 1.5em;
+}

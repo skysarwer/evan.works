@@ -1,0 +1,103 @@
+/**
+ * 1. Make the dialog container, and its child overlay spread across
+ *    the entire window.
+ */
+ .dialog-container,
+ .dialog-overlay {
+   position: fixed; /* 1 */
+   top: 0; /* 1 */
+   right: 0; /* 1 */
+   bottom: 0; /* 1 */
+   left: 0; /* 1 */
+ }
+ 
+ /**
+  * 1. Make sure the dialog container and all its descendants sits on
+  *    top of the rest of the page.
+  * 2. Make the dialog container a flex container to easily center the
+  *    dialog.
+  */
+ .dialog-container {
+   z-index: 2; /* 1 */
+   display: flex; /* 2 */
+   visibility: visible;
+   right: 0;
+   transition: 0.5s;
+ }
+ 
+ /**
+  * 1. Make sure the dialog container and all its descendants are not
+  *    visible and not focusable when it is hidden.
+  */
+ .dialog-container[aria-hidden='true'] {
+   visibility: hidden;
+   right: -23rem;
+   transition: 0.5s;
+
+   button.ribbon {
+      background: #E37C92 !important;
+		border-color: #994F5F !important;
+		text-shadow: #960423 0px 0px 8px !important;
+      transition: 0.5s;
+   }
+ }
+ 
+ /*.dialog-overlay {
+   background-color: rgba(43, 46, 56, 0.9); /* 1 
+ }*/
+
+ .dialog-close {
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    padding: 0 !important;
+    position: absolute;
+    right: 1em;
+    font-size: 0.875em;
+ }
+ 
+ .dialog-content.sidebar {
+    z-index: 2;
+    background-color: white;
+    height: 100vh;
+    padding: 2em;
+    width: 23rem;
+    right: 0;
+    position: absolute;
+    border-left: 0.5px solid #A5A5A6;
+    overflow-y: auto;
+
+   select {
+     width: 100%;
+   }
+
+   > *:first-child {
+     margin-top: 0;
+   }
+ }
+
+
+ button.ribbon {
+   position: fixed;
+   transform-origin: right;
+   font-size: 0.8em;
+   right: calc(1.125em - 1px);
+   height: 2.5em;
+   width: max-content;
+   top: 13.25em;
+   transform: rotate(90deg);
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   border-top: 1px solid #777779 !important;
+   margin-right: 0 !important;
+   letter-spacing: 0.075em;
+   border-bottom-right-radius: 26px;
+   padding-right: 2em;
+ }
+
+ .dialog-container button.ribbon {
+   position: absolute;
+   color: #fff !important;
+   right: calc(23rem + 1.125em);
+   transition: 0.5s;
+ }

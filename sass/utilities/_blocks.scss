@@ -1,0 +1,36 @@
+.is-style-font-bold {
+    font-family: $font__bold;
+}
+
+.is-style-font-semibold {
+    font-family: $font__semibold;
+}
+
+.is-style-font-title {
+    font-family: $font__title;
+}
+
+.is-style-font-thin {
+    font-family: $font__thin;
+}
+
+.is-style-font-regular {
+    font-family: $font__main;
+}
+
+.is-style-decorated {
+    position: relative;
+    &::before {
+        content: '';
+        width: 64%;
+        left: 18%;
+        height: 1px;
+        position: absolute;
+        border-top: 1.5px solid $color__accent;
+        top: calc(50% + 0.75px);
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}

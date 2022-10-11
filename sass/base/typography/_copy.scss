@@ -1,0 +1,107 @@
+p {
+	margin-bottom: 1.5em;
+}
+
+p.small {
+	font-size: 0.8em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 1.5em 1.5em;
+	position: relative;
+
+	&::before {
+		content: '"';
+		font-family: $font__bold;
+		color: #2A5B7A;
+		position: absolute;
+		left: -0.75em;
+		font-size: 2em;
+		top: -0.125em;
+		line-height: 1em;
+		font-style: italic;
+	}
+
+	p:last-of-type {
+		position: relative;
+	}
+
+	p:last-of-type::after {
+		font-family: $font__bold;
+		content: '"';
+		color: #2A5B7A;
+		font-size: 2em;
+		line-height: 0.5em;
+		font-style: italic;
+		transform-origin: 0 0;
+		transform: rotateY(180deg);
+		position: absolute;
+		margin-left: 0.75em;
+		bottom: 0.15em;
+	}
+
+	cite {
+		position: relative;
+		margin-left: 1em;
+	}
+
+	cite::before {
+		content: '';
+		font-family: $font__bold;
+		color: #2A5B7A;
+		line-height: 1em;
+		margin-right: 0.125em;
+		font-style: initial;
+		border-bottom: 2px solid #2A5B7A;
+		width: 2em;
+		position: absolute;
+		left: -2.25em;
+		top: -15%;
+		height: 1em;
+	
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: $color__background-pre;
+	font-family: $font__pre;
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font__code;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
