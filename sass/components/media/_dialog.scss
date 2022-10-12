@@ -23,6 +23,7 @@
    visibility: visible;
    right: 0;
    transition: 0.5s;
+   z-index: 999;
  }
  
  /**
@@ -61,11 +62,15 @@
     background-color: white;
     height: 100vh;
     padding: 2em;
-    width: 23rem;
+    width: calc(100vw - 2.5em);
     right: 0;
     position: absolute;
     border-left: 0.5px solid #A5A5A6;
     overflow-y: auto;
+
+    @media screen and (min-width: 480px) {
+      width: 23rem;
+    }
 
    select {
      width: 100%;
@@ -78,10 +83,8 @@
 
 
  button.ribbon {
-   position: fixed;
    transform-origin: right;
    font-size: 0.8em;
-   right: calc(1.125em - 1px);
    height: 2.5em;
    width: max-content;
    top: 13.25em;
@@ -95,9 +98,25 @@
    padding-right: 2em;
  }
 
+ .cta.ribbon {
+  position: fixed;
+  right: -2.5em;
+  transition: 0.5s;
+  z-index: 99;
+
+  &.active {
+    right: calc(1.125em - 1px);
+  }
+
+ }
+
  .dialog-container button.ribbon {
    position: absolute;
    color: #fff !important;
-   right: calc(23rem + 1.125em);
+   right: calc(100vw - 2.5rem + 1.125em);
    transition: 0.5s;
+
+   @media screen and (min-width: 480px) {
+    right: calc(23rem + 1.125em);
+   }
  }
