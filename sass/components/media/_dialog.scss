@@ -10,13 +10,7 @@
    bottom: 0; /* 1 */
    left: 0; /* 1 */
  }
- 
- /**
-  * 1. Make sure the dialog container and all its descendants sits on
-  *    top of the rest of the page.
-  * 2. Make the dialog container a flex container to easily center the
-  *    dialog.
-  */
+
  .dialog-container {
    z-index: 2; /* 1 */
    display: flex; /* 2 */
@@ -26,10 +20,6 @@
    z-index: 999;
  }
  
- /**
-  * 1. Make sure the dialog container and all its descendants are not
-  *    visible and not focusable when it is hidden.
-  */
  .dialog-container[aria-hidden='true'] {
    visibility: hidden;
    right: -23rem;
@@ -104,7 +94,7 @@
   transition: 0.5s;
   z-index: 99;
 
-  &.active {
+  &.active, &:focus {
     right: calc(1.125em - 1px);
   }
 
