@@ -20,7 +20,7 @@ function evn_pw_click_disable() {
     global $post;
     
     if(!empty($post->post_password)){
-        wp_enqueue_script('disable-right-click', get_template_directory_uri() . '/js/disable-right-click.js', array('jquery'), 1.0, true );
+        //wp_enqueue_script('disable-right-click', get_template_directory_uri() . '/js/disable-right-click.js', array('jquery'), 1.0, true );
     } 
 }
 add_action( 'wp_enqueue_scripts', 'evn_pw_click_disable' );

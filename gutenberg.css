@@ -382,10 +382,6 @@ body .editor-styles-wrapper a:hover, body .editor-styles-wrapper a:focus, body .
 	text-decoration: none;
 }
 
-body .editor-styles-wrapper a:focus {
-	outline: thin dotted;
-}
-
 body .editor-styles-wrapper a:hover, body .editor-styles-wrapper a:active {
 	outline: 0;
 }
