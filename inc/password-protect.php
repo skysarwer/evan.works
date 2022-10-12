@@ -7,7 +7,7 @@ function evn_password_agreement($output, $post) {
     $output = '
         <form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
         <p class="is-style-font-semibold">' . __( 'This webpage is password protected. To view it please enter your password below.' ) . '</p>
-        <p><input type="checkbox" required name="terms">' . __('By entering this password, I agree to not share this webpage, or its content, outside of my organization.') . '</p>
+        <p><input id="pw-agree" type="checkbox" required name="terms"><label for="pw-agree">' . __('By entering this password, I agree to not share this webpage, or its content, outside of my organization.') . '</label></p>
         <p><label for="' . $label . '">' . __( 'Password:' ) . ' <input name="post_password" id="' . $label . '" type="password" size="20" /></label> <input type="submit" name="Submit" value="' . esc_attr_x( 'Enter', 'post password form' ) . '" /></p></form>
     ';
 
