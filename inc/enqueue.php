@@ -30,7 +30,6 @@ add_action( 'enqueue_block_editor_assets', 'enqueue_editor_css' );
 function evn_scripts() {
 	
 	wp_enqueue_style( 'evn-style', get_stylesheet_uri(), array(), PTY_GDNVERSION );
-	wp_style_add_data( 'evn-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'evn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), PTY_GDNVERSION, true );
 
