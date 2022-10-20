@@ -14,16 +14,18 @@
 
 if (is_front_page()) {
 	get_header('', array('is_homepage' => true));
+	$var_class = 'homepage';
 } else {
 	get_header();
+	$var_class = '';
 }
 ?>	
 	<?php if (is_front_page()) {
 		evn_do_homepage_hero();
 	}?>
-	<div class="content-wrap">
-		<main id="primary" class="site-main">
-
+	
+	<main id="primary" class="<?php echo $var_class;?>">
+		<div class="content-wrap">
 			<?php
 			while ( have_posts() ) :
 				the_post();
@@ -37,10 +39,8 @@ if (is_front_page()) {
 
 			endwhile; // End of the loop.
 			?>
-
-		</main><!-- #main -->
-	</div>
-
+		</div>
+	</main><!-- #main -->
 <?php
 //get_sidebar();
 get_footer();
