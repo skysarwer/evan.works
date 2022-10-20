@@ -8,10 +8,7 @@
 
     .owl-prev, .owl-next {
         position: absolute;
-        bottom: 5em;
-        @media screen and (min-width: 410px) {
-            bottom: 9em;
-        }
+        bottom: 9em;
     }
 
     .owl-next {

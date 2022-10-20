@@ -171,6 +171,16 @@
     transition: var(--parvus-transition-duration);
   }
 
+  .parvus__slide .parvus__caption, .parvus__counter {
+    font-family: $font__thin;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .parvus__counter {
+    font-size: 0.8em;
+  }
+
   .parvus__slide > div:first-child {
     background: transparent;
     position: absolute;

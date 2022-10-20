@@ -20,6 +20,18 @@ ol {
 	}
 }
 
+ul li, ol li {
+	margin-bottom: 1em;
+}
+
+li ul, li ol {
+	margin-top: 0.5em
+}
+
+li ul li, li ol li {
+	margin-bottom: 0.5em;
+}
+
 ol > li > ol {
 
 	list-style: lower-alpha;
