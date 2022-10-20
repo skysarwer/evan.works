@@ -180,7 +180,6 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     width: max-content;
-    height: calc(100vh - 4.25em);
     border-radius: 1.5%;
     max-width: 95%;
     display: flex;
@@ -189,6 +188,10 @@
     gap: 1.125em;
     max-height: calc(100vh - 4.25em);
     transition: var(--parvus-transition-duration);
+
+    @media screen and (min-width: 1100px) {
+      height: calc(100vh - 4.25em);
+    }
   }
 
   .parvus__slide div, .parvus__slide .parvus__content {

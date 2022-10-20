@@ -168,6 +168,11 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/password-protect.php';
 
 /**
+ * Homepage Hero
+ */
+require get_template_directory() . '/inc/homepage-hero.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

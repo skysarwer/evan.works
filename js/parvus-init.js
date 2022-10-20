@@ -1,6 +1,7 @@
 const prvs = new Parvus({
   gallerySelector: '.event-gallery',
   captionsSelector: '.gallery-caption',
+  swipeClose: false,
 });
 
 prvs.on('open', function() {

@@ -12,8 +12,15 @@
  * @package evn
  */
 
-get_header();
-?>
+if (is_front_page()) {
+	get_header('', array('is_homepage' => true));
+} else {
+	get_header();
+}
+?>	
+	<?php if (is_front_page()) {
+		evn_do_homepage_hero();
+	}?>
 	<div class="content-wrap">
 		<main id="primary" class="site-main">
 

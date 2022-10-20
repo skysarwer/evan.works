@@ -18,7 +18,7 @@ input[type="submit"],
 
 	&:hover, 
 	&:active,
-	&:focus,
+	&:focus-visible,
 	&[aria-selected="true"] {
 		border-right: 1px solid $color__accent;
 		border-left: 1px solid $color__accent;
@@ -56,7 +56,7 @@ button.outline,
 
 	&:hover, 
 	&:active,
-	&:focus,
+	&:focus-visible,
 	&[aria-selected="true"] {
 		color: $color__background-body !important;
 		border-right: 1px solid #143C56;
@@ -81,7 +81,7 @@ button.cta,
 
 	&:hover, 
 	&:active,
-	&:focus,
+	&:focus-visible,
 	&[aria-selected="true"] {
 		background: #E37C92;
 		border-color: #994F5F;

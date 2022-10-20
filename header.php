@@ -10,6 +10,8 @@
  */
 
 ?>
+
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -26,7 +28,6 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'evn' ); ?></a>
 
 	<header id="masthead" class="site-header content-wrap">
-		
 		<div class="logo">
 			<a href="<?php echo site_url();?>">
 				<?php echo evn_logo_svg();?>
