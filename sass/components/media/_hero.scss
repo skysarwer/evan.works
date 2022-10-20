@@ -1,0 +1,41 @@
+.homepage-hero {
+    background: $color__accent;
+    color: #fff;
+    height: calc(100vh + 5em);
+    padding-top: 9.75em;
+    margin-top: -9em;
+    position: relative;
+    margin-bottom: 4em;
+
+    h1 {
+        color: #fff;
+        margin-top: 0;
+        text-shadow: 3px 2px 1px rgba(13, 62, 90, 0.93);
+        font-size: 2.25em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .homepage-content {
+
+        > div:first-child {
+            width: 38%;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 7em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
+        background: -moz-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
+        background: -ms-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
+        background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
+        background: -o-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);	
+    }
+}

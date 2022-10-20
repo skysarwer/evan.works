@@ -5,15 +5,14 @@ header.site-header {
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    height: 9em;
+    z-index: 9;
 
     .logo {
+        width: 6em;
         svg {
             width: 100%;
             height: 100%;
-
-            path, polygon {
-                fill: currentColor;
-            }
         }
     }
 
@@ -43,6 +42,10 @@ header.site-header {
 
         .nav-bar {
             background: #fff;
+        }
+
+        .logo svg path, .logo svg polygon {
+            fill: #fff;
         }
 
     }
