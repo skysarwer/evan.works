@@ -10,6 +10,10 @@ header.site-header {
         svg {
             width: 100%;
             height: 100%;
+
+            path, polygon {
+                fill: currentColor;
+            }
         }
     }
 
@@ -18,7 +22,7 @@ header.site-header {
         height: 0.3em;
         margin-bottom: 0.125em;
         display: block;
-        background: black;
+        background: #000;
         border-radius: 22%;
     }
 
@@ -26,6 +30,21 @@ header.site-header {
         background: none;
         border: none;
         padding: 0;
+    }
+
+    &.homepage {
+        
+        background: $color__accent;
+        color: #fff;
+
+        *:focus {
+            outline: 2px dotted $color__background-body;
+        }
+
+        .nav-bar {
+            background: #fff;
+        }
+
     }
 }
 

@@ -11,6 +11,15 @@
 
 ?>
 
+<?php 
+
+$var_class = '';
+
+if ($args['is_homepage'] === true) {
+	$var_class .= 'homepage';
+}
+
+?>
 
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -27,7 +36,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'evn' ); ?></a>
 
-	<header id="masthead" class="site-header content-wrap">
+	<header id="masthead" class="site-header content-wrap <?php echo $var_class; ?>">
 		<div class="logo">
 			<a href="<?php echo site_url();?>">
 				<?php echo evn_logo_svg();?>
