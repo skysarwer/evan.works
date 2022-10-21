@@ -6,3 +6,7 @@ body {
 	outline: 2px dotted $color__accent;
 	outline-offset: 1px;
 }
+
+html {
+	scroll-behavior: smooth;
+}

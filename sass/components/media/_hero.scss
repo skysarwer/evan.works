@@ -19,10 +19,125 @@
         font-size: 0.9em;
     }
 
+    button, a.button {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+            fill: transparent;
+            stroke: currentColor;
+            vertical-align: center;
+            vertical-align: middle;
+            vertical-align: -0.425em;
+        }
+    }
+
+    button.cta {
+        margin-right: 0.75em;
+        margin-top: 0.75em;
+    }
+
+    a.button svg {
+        transform: rotate(90deg);
+    }
+
     .homepage-content {
 
+        font-size: 0.7em;
+
         > div:first-child {
-            width: 38%;
+            width: 27em;
+            max-width: 100%;
+            position: relative;
+            z-index: 9;
+        }
+    }
+
+    #portrait {
+
+        position: absolute;
+        height: calc(100vh + 6em);
+        bottom: 0;
+        left: 40%;
+        width: max-content;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, $color__accent 0%, $color__accent 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 80%, $color__accent 100%);
+            background: -moz-linear-gradient(0deg, $color__accent 0%, $color__accent 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 80%, $color__accent 100%);
+            background: -ms-linear-gradient(0deg, $color__accent 0%, $color__accent 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 80%, $color__accent 100%);
+            background: -webkit-linear-gradient(0deg, $color__accent 0%, $color__accent 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 80%, $color__accent 100%);
+            background: -o-linear-gradient(0deg, $color__accent 0%, $color__accent 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 80%, $color__accent 100%);
+        }
+
+        @media screen and (max-width: 1024px) and (orientation: portrait) {
+            left: 8%;
+        }
+        
+    }
+
+    @media screen and (max-width: 500px) and (orientation: portrait) {
+
+        #portrait {
+            height: calc(50vh + 3em);
+            width: calc(62vh + 4em);
+            top: -2em;
+            left: -10%;
+
+            img {
+                object-fit: cover;
+                object-position: 0 0;
+            }
+
+            &::before{
+                height: 20%;
+                position: absolute;
+                top: unset;
+                bottom: 0;
+                background: linear-gradient(90deg, $color__accent 0%, rgba(255,255,255,0) 100%);
+                background: -moz-linear-gradient(90deg, $color__accent 0%, rgba(255,255,255,0) 100%);
+                background: -ms-linear-gradient(90deg, $color__accent 0%, rgba(255,255,255,0) 100%);
+                background: -webkit-linear-gradient(90deg, $color__accent 0%, rgba(255,255,255,0) 100%);
+                background: -o-linear-gradient(90deg, $color__accent 0%, rgba(255,255,255,0) 100%);
+            }
+        }
+
+        .homepage-content {
+            margin-top: calc(14vh + 2em);
+            font-size: 0.8em;
+        }
+    }
+
+    @media screen and (max-width: 950px) and (orientation: landscape) {
+        padding-top: 7.375em;
+        
+    }
+
+    @media screen and (min-width: 600px) {
+        .homepage-content{
+            font-size: 0.8em;
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .homepage-content{
+            font-size: 1em;
+        }
+        button, a.button {
+            padding: 10px 16px;
         }
     }
 }

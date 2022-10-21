@@ -80,5 +80,5 @@ main.homepage::after {
 	background: -ms-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
 	background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);
 	background: -o-linear-gradient(270deg, rgba(255,255,255,0) 0%, $color__background-body 100%);	
-    
+    pointer-events: none;
 }

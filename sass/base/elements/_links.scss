@@ -1,4 +1,4 @@
-a {
+a:not(.button) {
 	color: $color__link;
 	text-decoration-color: $color__link-hover;
 	text-decoration-thickness: 2px;
