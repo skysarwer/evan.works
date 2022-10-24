@@ -7,6 +7,7 @@
     position: relative;
     position: sticky;
     top: 0;
+    overflow: hidden;
 
     h1 {
         color: #fff;
@@ -22,6 +23,8 @@
     button, a.button {
         font-size: 0.9em;
         padding: 0.5em 1em;
+        display: inline-block;
+        line-height: 1.5;
 
         svg {
             width: 1.5em;
@@ -40,8 +43,15 @@
         margin-top: 0.75em;
     }
 
+    a.button {
+        border-color: #16374B;
+    }
+
+
+
     a.button svg {
         transform: rotate(90deg);
+        color: #000;
     }
 
     .homepage-content {
