@@ -35,6 +35,8 @@ function evn_scripts() {
 
 	wp_enqueue_script( 'evn-cta-sidebar', get_template_directory_uri() . '/js/cta-sidebar.js', array(), PTY_GDNVERSION, true );
 
+	wp_enqueue_script( 'evn-bookings', get_template_directory_uri() . '/js/bookings.js', array(), PTY_GDNVERSION, true );
+
 	wp_enqueue_script('evn_parvus_src', get_template_directory_uri() . '/js/parvus.min.js', array('jquery'), PTY_GDNVERSION, true );
 	
 	wp_enqueue_script('evn_parvus_init', get_template_directory_uri() . '/js/parvus-init.js', array('evn_parvus_src', 'jquery'), PTY_GDNVERSION, true );

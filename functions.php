@@ -173,6 +173,11 @@ require get_template_directory() . '/inc/password-protect.php';
 require get_template_directory() . '/inc/homepage-hero.php';
 
 /**
+ * Bookings
+ */
+require get_template_directory() . '/inc/bookings.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
