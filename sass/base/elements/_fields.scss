@@ -167,6 +167,17 @@ input[type="file"] {
 	border-radius: 0;
 }
 
+input[type="file"]::webkit-file-upload-button,
+input[type="file"]::file-selector-button {
+	background-color: #F4FCFF;
+} 
+
+input[type="file"]:hover::webkit-file-upload-button, 
+input[type="file"]:hover::file-selector-button  {
+
+	background-color: #CAE7F6;
+}
+
 /*Custom CF7 Booking Fieldset*/
 
 .wpcf7-form #booking-fields {
@@ -179,10 +190,15 @@ input[type="file"] {
 		margin-top: 0.5em;
 		margin-bottom: 1.5em;
 	}
+
+	.wpcf7-not-valid-tip {
+		position: absolute;
+		top: -5em;
+		width: 140%;
+	}
 }
 
 /* Contact Form 7 Styles */
-
 .wpcf7-not-valid-tip {
 	font-size: 0.8em;
 }
