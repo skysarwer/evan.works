@@ -121,7 +121,37 @@ function evn_add_booking( $contact_form, $abort, $submission ) {
             )
         );
 
-        $contact_form->skip_mail = true;    
+        //Email management, skip CF7 email, send Booked email
+        $contact_form->skip_mail = true;  
+        
+        $email_content = get_option('booked_appt_confirmation_email_content',false);
+        $email_subject = get_option('booked_appt_confirmation_email_subject',false);
+
+        $token_replacements = booked_get_appointment_tokens( $new_appointment );
+
+        if ( $email_content && $email_subject ):
+
+            $admin_email = booked_which_admin_to_send_email( false );
+            $email_content = booked_token_replacement( $email_content,$token_replacements );
+            $email_subject = booked_token_replacement( $email_subject,$token_replacements );
+            do_action( 'booked_confirmation_email', $email, $email_subject, $email_content, $admin_email );
+
+        endif;
+
+        // Send an email to the Admin?
+        $email_content = get_option('booked_admin_appointment_email_content',false);
+        $email_subject = get_option('booked_admin_appointment_email_subject',false);
+        if ($email_content && $email_subject):
+
+            $admin_email = booked_which_admin_to_send_email( false );
+            $email_content = booked_token_replacement( $email_content,$token_replacements );
+            $email_subject = booked_token_replacement( $email_subject,$token_replacements );
+            do_action( 'booked_admin_confirmation_email', $admin_email, $email_subject, $email_content, $token_replacements['email'], $token_replacements['name'] );
+
+        endif;
+
+        do_action('booked_new_appointment_created', $post_id);
+  
     }
 
     return  $contact_form;

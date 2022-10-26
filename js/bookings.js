@@ -61,7 +61,7 @@ function updateHourInput(dateInput, availableTimeSlots) {
 		updateDateLabel(dateObj, l10nKeyStrings[bookingHourInput.value]);
 		document.querySelector('#booking-date-label').classList.remove('wpcf7-not-valid-tip');
 	} else {
-		document.querySelector('#booking-date-label').innerHTML = 'Sorry, there are no available timeslots for <span class="is-style-font-regular">' + dateObj.toLocaleDateString('en-us', { weekday:"long", month:"long", day:"numeric"}) + '</span>. Please select another day.';
+		document.querySelector('#booking-date-label').innerHTML = 'Sorry, there are no available times for <span class="is-style-font-regular">' + dateObj.toLocaleDateString('en-us', { weekday:"long", month:"long", day:"numeric"}) + '</span>. Please select another day.';
 		document.querySelector('#booking-date-label').classList.add('wpcf7-not-valid-tip');
 	}
 }
