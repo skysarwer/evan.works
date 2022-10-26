@@ -14,16 +14,6 @@
 
  
 if (is_front_page()) {
-/*
-$local_time = current_time('timestamp');
-
-$appts = booked_appointments_available(date_i18n('Y',$local_time), false, false, false, true);
-var_dump($appts);
-
-$appts2 = booked_appointments_available(date_i18n('Y',$local_time), (date_i18n('m',$local_time) + 01), false, false, true);
-var_dump($appts2);
-$counter = 0;
-exit;*/
 	get_header('', array('is_homepage' => true));
 	$var_class = 'homepage';
 } else {

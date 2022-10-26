@@ -13,6 +13,7 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
+input[type="file"],
 select,
 textarea {
 	color: $color__text-input;
@@ -129,9 +130,10 @@ input[type="checkbox"] {
 }
 
 input[type="file"] {
-	border-top: 1px solid $color__accent;
-	border-bottom: 1px solid $color__accent;
+	border-left: 0;
+	border-right: 0;
 	padding: 0.5em;
+	border-radius: 0;
 }
 
 /* Contact Form 7 Styles */
