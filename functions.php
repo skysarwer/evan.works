@@ -178,6 +178,11 @@ require get_template_directory() . '/inc/homepage-hero.php';
 require get_template_directory() . '/inc/bookings.php';
 
 /**
+ * Services Icons
+ */
+require get_template_directory() . '/inc/services.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

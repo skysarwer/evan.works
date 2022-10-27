@@ -3,8 +3,45 @@
 --------------------------------------------------------------*/
 @import "../abstracts/variables/colors";
 @import "../abstracts/variables/typography";
-@import "../base/typography/fonts";
 @import "../abstracts/mixins/mixins";
+
+/* Fonts for gutenberg */ 
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../fonts/lato-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latosemibold';
+    src: url('../fonts/lato-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'latothin';
+    src: url('../fonts/lato-thin-webfont.woff2') format('woff2'),
+         url('../fonts/lato-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body .editor-styles-wrapper{
 
@@ -126,5 +163,9 @@ body .editor-styles-wrapper{
 	/* General Utilities
 	--------------------------------------------- */
 	@import "../utilities/general";
+
+	/* WP-Core Utilities
+	--------------------------------------------- */
+	@import "../components/content/posts-and-pages";
 
 }
