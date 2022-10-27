@@ -54,14 +54,18 @@ function evn_add_booking( $contact_form, $abort, $submission ) {
 
     $posted_data = $submission->get_posted_data();
 
-    if ($posted_data['show-booking']) {
+    if (empty($posted_data['show-booking'][0])) {
+        return;
+    }
+
+    if ($posted_data['show-booking'][0] !== '') {
 
         //Build timestamp and post title
 
         $time_format = get_option('time_format');
         $date_format = get_option('date_format');
 
-       $timestring_array = array(
+        $timestring_array = array(
             '1030-1100' => '10:30:00',
             '1100-1130' => '11:00:00',
             '1130-1200' => '11:30:00',
@@ -94,10 +98,11 @@ function evn_add_booking( $contact_form, $abort, $submission ) {
                 <strong>Details</strong><br>
                 <?php echo $posted_data['details'];?>
             </p>
+            <!---
             <p class="cf-meta-value">
                 <strong>File Attachment</strong><br>
-                <?php echo $posted_data['file-attachment'];?>
-            </p>
+                <?php //echo $posted_data['file-attachment'];?>
+            </p>--->
         <?php
         $appointment_information_markup = ob_get_clean();
 
