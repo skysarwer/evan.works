@@ -1,5 +1,4 @@
 /node_modules
-/gutenberg.css
-/gutenberg.css.map
+/css/*
 /style.css
 /style.css.map

@@ -18,8 +18,8 @@ function enqueue_editor_css() {
 		true
 	);
 
-	wp_enqueue_style( 'editor-styles', get_stylesheet_directory_uri() . '/css/editor.css' );
-	wp_enqueue_style( 'gutenberg-css', get_stylesheet_directory_uri() . '/gutenberg.css' );
+	//wp_enqueue_style( 'editor-styles', get_stylesheet_directory_uri() . '/css/editor.css' );
+	wp_enqueue_style( 'gutenberg-css', get_stylesheet_directory_uri() . '/css/gutenberg.css' );
 
 }
 add_action( 'enqueue_block_editor_assets', 'enqueue_editor_css' );

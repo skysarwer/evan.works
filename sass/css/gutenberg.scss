@@ -1,10 +1,10 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-@import "abstracts/variables/colors";
-@import "abstracts/variables/typography";
-@import "base/typography/fonts";
-@import "abstracts/mixins/mixins";
+@import "../abstracts/variables/colors";
+@import "../abstracts/variables/typography";
+@import "../base/typography/fonts";
+@import "../abstracts/mixins/mixins";
 
 body .editor-styles-wrapper{
 
@@ -45,10 +45,10 @@ body .editor-styles-wrapper{
 	/*--------------------------------------------------------------
 	# Elements
 	--------------------------------------------------------------*/
-	@import "base/elements/buttons";
-	@import "base/elements/links";
-	@import "base/elements/lists";
-	@import "base/elements/media";
+	@import "../base/elements/buttons";
+	@import "../base/elements/links";
+	@import "../base/elements/lists";
+	@import "../base/elements/media";
 
 	/*--------------------------------------------------------------
 	# Typography
@@ -59,18 +59,18 @@ body .editor-styles-wrapper{
 	font-size: 1rem;
 	line-height: $font__line-height-body;
 	
-	@import "base/typography/copy";
-	@import "base/typography/headings";
+	@import "../base/typography/copy";
+	@import "../base/typography/headings";
 
 	
 	/*--------------------------------------------------------------
 	# Media
 	--------------------------------------------------------------*/
 	
-	@import "components/media/captions";
-	@import "components/media/galleries";
-	@import "components/media/media";
-	@import "components/media/screen-array";
+	@import "../components/media/captions";
+	@import "../components/media/galleries";
+	@import "../components/media/media";
+	@import "../components/media/screen-array";
 
 	.screen-array li {
 		background: linear-gradient(to left, #000, #858686, #000);
@@ -100,11 +100,11 @@ body .editor-styles-wrapper{
 
 	/* Normalize
 	--------------------------------------------- */
-	@import "generic/normalize";
+	@import "../generic/normalize";
 
 	/* Box sizing
 	--------------------------------------------- */
-	@import "generic/box-sizing";
+	@import "../generic/box-sizing";
 
 
 	/*--------------------------------------------------------------
@@ -113,18 +113,18 @@ body .editor-styles-wrapper{
 
 	/* Accessibility
 	--------------------------------------------- */
-	@import "utilities/accessibility";
+	@import "../utilities/accessibility";
 
 	/* Alignments
 	--------------------------------------------- */
-	@import "utilities/alignments";
+	@import "../utilities/alignments";
 
 	/* Blocks
 	--------------------------------------------- */
-	@import "utilities/blocks";
+	@import "../utilities/blocks";
 
 	/* General Utilities
 	--------------------------------------------- */
-	@import "utilities/general";
+	@import "../utilities/general";
 
 }
