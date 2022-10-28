@@ -5,33 +5,98 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
 
     .service {
 
         padding-top: 1em;
         width: 50%;
+        position: relative;
+
+        .tooltip-trigger {
+            background: transparent; 
+            border: none;
+            position: relative;
+
+            &:hover, &:focus,  &:focus-within  {
+                background: transparent;
+                border: none;
+                outline: none;
+
+                > svg {
+                    outline: 2px dotted $color__accent;
+                    outline-offset: 1px;
+                }
+
+                + .tooltip {
+                    visibility: visible;
+                }
+            }
+
+            > svg {
+                border-radius: 50%;
+                width: 100%;
+                height: auto;
+                padding: 0.5em;
+            }
+    
+            > h3 {
+                color: #333;
+                font-family: $font__semibold;
+                text-align: center;
+                margin-top: 0;
+                font-weight: unset;
+            }
+        }
 
         @media screen and (min-width: 480px) {
             width: 30%;
         }
-
-        svg {
-            border-radius: 50%;
-            width: 100%;
-            height: auto;
-            padding: 0.5em;
-        }
-
-        h3 {
-            color: #333;
-            font-family: $font__semibold;
-            text-align: center;
-            margin-top: 0;
-            font-weight: unset;
-        }
     }
 
-}
+        .tooltip {
+            position: absolute;
+            background: white;
+            text-align: left;
+            width: max-content;
+            left: 0;
+            bottom: -58%;
+            padding: 2em;
+            padding-left: 0;
+            font-size: 0.8em;
+            border: 2px solid $color__accent;
+            visibility: hidden;
+            color: #333;
+            z-index: 9;
+            h3 {
+                padding-left: 2.25em;
+                margin-bottom: -1em;
+                margin-top: 0;
+                font-size: 1.5em;
+            }
+
+            .tooltip-content {
+                display: flex;
+                align-items: center;
+                >svg {
+                    padding: 1em;
+                }
+                > div {
+                    width: 44ch;
+                }
+            }
+
+            &.d-r {
+                left: unset;
+                right: 0;
+            }
+
+            &:hover, &:focus,  &:focus-within  {
+                visibility: visible;
+            }
+
+        }
+    }
 
 /* Utility classes for icon SVGs*/
 
