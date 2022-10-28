@@ -68,6 +68,7 @@
 
     .homepage-bottom {
         position: absolute;
+        bottom: 23vh;
         width: 100%;
         left: 0;
         .social-media {
@@ -140,13 +141,14 @@
             font-size: 0.8em;
         }
 
-        .homepage-bottom {
-            bottom: 20vh;
-        }
     }
 
     @media screen and (max-width: 950px) and (orientation: landscape) {
         padding-top: 7.375em;
+
+        .homepage-bottom {
+            bottom: unset;
+        }
         
     }
 
