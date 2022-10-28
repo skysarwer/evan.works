@@ -181,10 +181,6 @@ input[type="file"]:hover::file-selector-button  {
 /*Custom CF7 Booking Fieldset*/
 
 .wpcf7-form #booking-fields {
-	display: flex;
-	gap: 1em;
-	align-items: baseline;
-	justify-content: space-between;
 
 	p {
 		margin-top: 0.5em;
@@ -195,6 +191,13 @@ input[type="file"]:hover::file-selector-button  {
 		position: absolute;
 		top: -5em;
 		width: 140%;
+	}
+
+	@media screen and (min-width: 480px) {
+		display: flex;
+		gap: 1em;
+		align-items: baseline;
+		justify-content: space-between;
 	}
 }
 

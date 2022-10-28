@@ -1,4 +1,4 @@
-a:not(.button) {
+a:not(.button, .wp-block-button__link) {
 	color: $color__link;
 	text-decoration-color: $color__link-hover;
 	text-decoration-thickness: 2px;
