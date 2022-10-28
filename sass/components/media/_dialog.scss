@@ -16,20 +16,23 @@
    display: flex; /* 2 */
    visibility: visible;
    right: 0;
-   transition: 0.5s;
+   transition: 0.625s;
    z-index: 999;
  }
  
  .dialog-container[aria-hidden='true'] {
    visibility: hidden;
    right: -23rem;
-   transition: 0.5s;
+   transition: 0.625s;
 
    button.ribbon {
       background: #E37C92 !important;
 		border-color: #994F5F !important;
 		text-shadow: #960423 0px 0px 8px !important;
-      transition: 0.5s;
+      transition: 0.625s;
+      svg {
+        transform: rotate(270deg);
+      }
    }
  }
  
@@ -85,13 +88,17 @@
    margin-right: 0 !important;
    letter-spacing: 0.075em;
    border-bottom-right-radius: 26px;
-   padding-right: 2em;
+   padding-right: 1.25em;
+
+   svg {
+    transform: rotate(270deg);
+   }
  }
 
  .cta.ribbon {
   position: fixed;
   right: -2.5em;
-  transition: 0.5s;
+  transition: 0.625s;
   z-index: 99;
 
   &.active, &:focus {
@@ -104,7 +111,15 @@
    position: absolute;
    color: #fff !important;
    right: calc(100vw - 2.5rem + 1.125em);
-   transition: 0.5s;
+   transition: 0.625s;
+
+   svg {
+    transform: rotate(0deg);
+
+    .cta-arrow {
+      stroke: none;
+    }
+   }
 
    @media screen and (min-width: 480px) {
     right: calc(23rem + 1.125em);

@@ -105,6 +105,12 @@ function evn_marker_svg() {
     ';
 }
 
+function evn_cta_arrow_svg() {
+    return '
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="transparent" stroke="currentColor"><path stroke="none" d="M0 0h24v24H0z"></path><polyline class="cta-arrow" points="9 6 15 12 9 18"></polyline><polyline points="9 6 15 12 9 18"></polyline></svg>
+    ';
+}
+
 
 /***
 * Services svgs

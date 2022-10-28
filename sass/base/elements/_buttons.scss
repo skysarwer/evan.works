@@ -33,7 +33,25 @@ a.button,
 	}
 
 	&:visited {
-		color: $color__accent;
+		color: $color__accent;     
+	}
+
+	svg {
+		width: 1.5em;
+		height: 1.5em;
+		line-height: 1.5em;
+		fill: transparent;
+		stroke: currentColor;
+		vertical-align: center;
+		vertical-align: middle;
+		vertical-align: -0.425em;
+
+		.cta-arrow {
+			stroke: #960423;
+			transform: translate(0px,2px);
+			opacity: 0.7;
+		}
+		
 	}
 }
 

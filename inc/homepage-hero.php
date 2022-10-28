@@ -11,7 +11,7 @@ function evn_do_homepage_hero() {
                     <h1><?php _e('Hi, my name is Evan', 'evn');?></h1>
                     <p><?php _e('I build professional websites, tailor fit to the needs of both the people that I work with and their end users.', 'evn');?></p>
                     <p><?php _e('I love solving complex problems in pursuit of ambitious designs. I strive to provide work that is scalable, practical and user friendly.', 'evn');?></p>
-                    <button class="cta" type="button" data-a11y-dialog-show="contact_cta"><?php _e('Work with me', 'evn');?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="transparent" stroke="currentColor"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="9 6 15 12 9 18"></polyline></svg></button>
+                    <button class="cta" type="button" data-a11y-dialog-show="contact_cta"><?php _e('Work with me', 'evn');?> <?php echo evn_cta_arrow_svg();?></button>
                     <a class="button" href="#primary"><?php _e('Learn more', 'evn');?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="transparent" stroke="currentColor"><path stroke="none" d="M0 0h24v24H0z"></path><polyline points="9 6 15 12 9 18"></polyline></svg></a>
                 </div>
                 <figure id="portrait">
