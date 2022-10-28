@@ -23,3 +23,28 @@ a:not(.button, .wp-block-button__link) {
 		outline: 0;
 	}
 }
+
+/* SVG Icons (Social media) */
+
+a.icon {
+	text-decoration: none;
+	line-height: 0;
+	display: inline-block;
+	width: 1.375em;
+	height: 1.375em;
+	margin-right: 0.375em;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+a.icon svg {
+	
+	width: 100%;
+	height: 100%;
+
+	path {
+		fill: currentColor;
+	}
+}

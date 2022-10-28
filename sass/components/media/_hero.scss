@@ -66,6 +66,16 @@
         }
     }
 
+    .homepage-bottom {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        .social-media {
+            margin-right: 0;
+            width: max-content;
+        }
+    }
+
     #portrait {
 
         position: absolute;
@@ -128,6 +138,10 @@
         .homepage-content {
             margin-top: calc(14vh + 2em);
             font-size: 0.8em;
+        }
+
+        .homepage-bottom {
+            bottom: 20vh;
         }
     }
 

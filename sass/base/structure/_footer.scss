@@ -25,6 +25,11 @@ footer {
         text-align: center;
     }
 
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
     .footer-bottom {
         display: flex;
         flex-direction: column;
