@@ -25,17 +25,6 @@
         padding: 0.5em 1em;
         display: inline-block;
         line-height: 1.5;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-            line-height: 1.5em;
-            fill: transparent;
-            stroke: currentColor;
-            vertical-align: center;
-            vertical-align: middle;
-            vertical-align: -0.425em;
-        }
     }
 
     button.cta {
@@ -71,7 +60,7 @@
         bottom: 23vh;
         width: 100%;
         left: 0;
-        
+
         .social-media {
             margin-right: 0;
             width: max-content;
