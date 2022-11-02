@@ -25,6 +25,14 @@ function evn_timeslots_index() {
             $this_month_results = booked_appointments_available(date_i18n('Y',$local_time), (date_i18n('m',$local_time)), false, false, true);
 
             $next_month_results = booked_appointments_available(date_i18n('Y',$local_time), (date_i18n('m',$local_time) + 01), false, false, true);
+
+            if(empty($this_month_results)) {
+                $this_month_results = array();
+            }
+
+            if(empty($next_month_results)) {
+                $next_month_results = array();
+            }
     
             $result = array_merge( $this_month_results, $next_month_results);
 
