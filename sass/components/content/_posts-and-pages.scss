@@ -22,12 +22,15 @@
 	}
 
 	@media screen and (min-width: 1100px) { 
-		//padding-left: 15em;
-		//padding-right: 15em;
+		padding-left: 15em;
+		padding-right: 15em;
 		margin: 0 auto;
-		//max-width: 130ch;
-		width: calc(45rem + 8vw);
+		max-width: 150ch;
 	}
+}
+
+.has-page .entry-content {
+	width: calc(45rem + 8vw);
 }
 
 .entry-header {

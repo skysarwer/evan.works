@@ -1,4 +1,4 @@
-.site {
+/*.site {
 	display: grid;
 	grid-template-columns: auto ($size__site-sidebar);
 	grid-template-areas:
@@ -13,7 +13,7 @@
 
 .site-main {
 	grid-area: main;
-	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. 
 }
 
 .widget-area {
@@ -22,6 +22,6 @@
 
 .site-footer {
 	grid-area: footer;
-}
+}*/
 
-@import "no-sidebar";
+//@import "no-sidebar";
