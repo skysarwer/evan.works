@@ -1,15 +1,15 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-@import "../abstracts/variables/colors";
-@import "../abstracts/variables/typography";
-@import "../abstracts/mixins/mixins";
+@import "../../abstracts/variables/colors";
+@import "../../abstracts/variables/typography";
+@import "../../abstracts/mixins/mixins";
 
 /* Fonts for gutenberg */ 
 @font-face {
     font-family: 'latoblack';
-    src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
-         url('../fonts/lato-black-webfont.woff') format('woff');
+    src: url('../../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../../fonts/lato-black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -17,8 +17,8 @@
 
 @font-face {
     font-family: 'latoregular';
-    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
-         url('../fonts/lato-regular-webfont.woff') format('woff');
+    src: url('../../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/lato-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -26,8 +26,8 @@
 
 @font-face {
     font-family: 'latosemibold';
-    src: url('../fonts/lato-semibold-webfont.woff2') format('woff2'),
-         url('../fonts/lato-semibold-webfont.woff') format('woff');
+    src: url('../../fonts/lato-semibold-webfont.woff2') format('woff2'),
+         url('../../fonts/lato-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'latothin';
-    src: url('../fonts/lato-thin-webfont.woff2') format('woff2'),
-         url('../fonts/lato-thin-webfont.woff') format('woff');
+    src: url('../../fonts/lato-thin-webfont.woff2') format('woff2'),
+         url('../../fonts/lato-thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -82,10 +82,10 @@ body .editor-styles-wrapper{
 	/*--------------------------------------------------------------
 	# Elements
 	--------------------------------------------------------------*/
-	@import "../base/elements/buttons";
-	@import "../base/elements/links";
-	@import "../base/elements/lists";
-	@import "../base/elements/media";
+	@import "../../base/elements/buttons";
+	@import "../../base/elements/links";
+	@import "../../base/elements/lists";
+	@import "../../base/elements/media";
 
 	/*--------------------------------------------------------------
 	# Typography
@@ -96,18 +96,18 @@ body .editor-styles-wrapper{
 	font-size: 1rem;
 	line-height: $font__line-height-body;
 	
-	@import "../base/typography/copy";
-	@import "../base/typography/headings";
+	@import "../../base/typography/copy";
+	@import "../../base/typography/headings";
 
 	
 	/*--------------------------------------------------------------
 	# Media
 	--------------------------------------------------------------*/
 	
-	@import "../components/media/captions";
-	@import "../components/media/galleries";
-	@import "../components/media/media";
-	@import "../components/media/screen-array";
+	@import "../../components/media/captions";
+	@import "../../components/media/galleries";
+	@import "../../components/media/media";
+	@import "../../components/media/screen-array";
 
 	.screen-array li {
 		background: linear-gradient(to left, #000, #858686, #000);
@@ -137,11 +137,11 @@ body .editor-styles-wrapper{
 
 	/* Normalize
 	--------------------------------------------- */
-	@import "../generic/normalize";
+	@import "../../generic/normalize";
 
 	/* Box sizing
 	--------------------------------------------- */
-	@import "../generic/box-sizing";
+	@import "../../generic/box-sizing";
 
 
 	/*--------------------------------------------------------------
@@ -150,22 +150,22 @@ body .editor-styles-wrapper{
 
 	/* Accessibility
 	--------------------------------------------- */
-	@import "../utilities/accessibility";
+	@import "../../utilities/accessibility";
 
 	/* Alignments
 	--------------------------------------------- */
-	@import "../utilities/alignments";
+	@import "../../utilities/alignments";
 
 	/* Blocks
 	--------------------------------------------- */
-	@import "../utilities/blocks";
+	@import "../../utilities/blocks";
 
 	/* General Utilities
 	--------------------------------------------- */
-	@import "../utilities/general";
+	@import "../../utilities/general";
 
 	/* WP-Core Utilities
 	--------------------------------------------- */
-	@import "../components/content/posts-and-pages";
+	@import "../../components/content/posts-and-pages";
 
 }
