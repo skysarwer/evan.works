@@ -17,15 +17,16 @@
 	margin: 1.5em 0 0;
 
 	@media screen and (min-width: 600px) { 
-		padding-left: 1em;
-		padding-right: 1em;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
 
 	@media screen and (min-width: 1100px) { 
-		padding-left: 10em;
-		padding-right: 10em;
+		//padding-left: 15em;
+		//padding-right: 15em;
 		margin: 0 auto;
-		max-width: 130ch;
+		//max-width: 130ch;
+		width: calc(45rem + 8vw);
 	}
 }
 
