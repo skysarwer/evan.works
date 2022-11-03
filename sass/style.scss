@@ -51,43 +51,45 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@import "abstracts/colors";
+@import "abstracts/mixins";
+@import "abstracts/typography";
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
+/* Structure
+--------------------------------------------- */
+@import "structure/body";
+@import "structure/content";
+@import "structure/fonts";
+@import "structure/footer";
+@import "structure/header";
+@import "structure/navigation";
+
+/* Elements
+--------------------------------------------- */
+@import "elements/buttons";
+@import "elements/copy";
+@import "elements/fields";
+@import "elements/hr";
+@import "elements/links";
+@import "elements/lists";
+//@import "elements/media";
+@import "elements/tables";
+
+/* Patterns
+--------------------------------------------- */
+@import "patterns/captions";
+@import "patterns/dialog";
+@import "patterns/galleries";
+@import "patterns/hero";
+@import "patterns/media";
+@import "patterns/owl";
+@import "patterns/parvus";
+@import "patterns/screen-array";
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@import "misc/normalize";
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
-
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
-
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Utilities
