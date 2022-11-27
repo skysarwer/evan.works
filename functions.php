@@ -7,9 +7,9 @@
  * @package evn
  */
 
-if ( ! defined( 'PTY_GDNVERSION' ) ) {
+if ( ! defined( 'EVN_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'PTY_GDNVERSION', '1.0.0' );
+	define( 'EVN_VERSION', '1.0.0' );
 }
 
 /**
