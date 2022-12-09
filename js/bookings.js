@@ -68,6 +68,16 @@ function updateHourInput(dateInput, availableTimeSlots) {
 	}
 }
 
+(function($) {
+	$('#book-date').datepicker({
+		language: 'en',
+		position: 'top left',
+		minDate: new Date(),
+		timepicker: false,
+		dateFormat: 'd MM yyyy',
+	  });
+} )( jQuery );
+
 function updateDateLabel(dateObj, hour) {
 
 	var hourFields = hour.split(' ');
@@ -97,6 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 		var showBookingInput = document.querySelector('#show-booking input'),
 		bookingDateInput = document.querySelector('#book-date'),
+		bookingDatepickerInput = document.querySelector('#book-datepicker'),
 		bookingHourInput = document.querySelector('#book-hour');
 
 		const firstAvailableDay = Object.keys(availableTimeSlots)[0],
