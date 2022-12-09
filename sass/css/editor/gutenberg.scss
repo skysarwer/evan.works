@@ -1,9 +1,9 @@
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-@import "../../variables/colors";
-@import "../../variables/typography";
-@import "../../variables/mixins";
+@import "../../abstracts/colors";
+@import "../../abstracts/typography";
+@import "../../abstracts/mixins";
 
 /* Fonts for gutenberg */ 
 @font-face {
@@ -43,7 +43,7 @@
 
 }
 
-body .editor-styles-wrapper{
+.editor-styles-wrapper{
 
 	overflow-x: hidden;
 
