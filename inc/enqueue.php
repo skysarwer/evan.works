@@ -37,9 +37,9 @@ function evn_scripts() {
 
 	wp_enqueue_script( 'evn-bookings', get_template_directory_uri() . '/js/bookings.js', array(), EVN_VERSION, true );
 
-	wp_enqueue_script('evn_parvus_src', get_template_directory_uri() . '/js/parvus.min.js', array('jquery'), EVN_VERSION, true );
+	//wp_enqueue_script('evn_parvus_src', get_template_directory_uri() . '/js/parvus.min.js', array('jquery'), EVN_VERSION, true );
 	
-	wp_enqueue_script('evn_parvus_init', get_template_directory_uri() . '/js/parvus-init.js', array('evn_parvus_src', 'jquery'), EVN_VERSION, true );
+	//wp_enqueue_script('evn_parvus_init', get_template_directory_uri() . '/js/parvus-init.js', array('evn_parvus_src', 'jquery'), EVN_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

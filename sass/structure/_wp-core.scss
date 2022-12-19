@@ -1,0 +1,9 @@
+.wp-block-columns.alignwide {
+	gap: 2em !important;
+}
+
+@media screen and (min-width: 480px) {
+	.wp-block-columns.alignwide {
+		gap: 6em !important;
+	}
+}

@@ -28,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "abstracts/colors";
 @import "abstracts/mixins";
 @import "abstracts/typography";
+@import "abstracts/structure";
 
 /*--------------------------------------------------------------
 # Structure
@@ -38,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "structure/footer";
 @import "structure/header";
 @import "structure/navigation";
+@import "structure/wp-core";
 
 /*--------------------------------------------------------------
 # Elements

@@ -20,7 +20,7 @@ a.button,
 
 	&:hover, 
 	&:active,
-	&:focus-visible,
+	&:focus,
 	&[aria-selected="true"] {
 		border-right: 1px solid $color__accent;
 		border-left: 1px solid $color__accent;
@@ -33,7 +33,7 @@ a.button,
 	}
 
 	&:visited {
-		color: $color__accent;     
+		color: $color__accent !important;     
 	}
 
 	svg {

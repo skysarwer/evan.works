@@ -9,7 +9,7 @@
 
 if ( ! defined( 'EVN_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'EVN_VERSION', '1.0.0' );
+	define( 'EVN_VERSION', '1.0.1' );
 }
 
 /**

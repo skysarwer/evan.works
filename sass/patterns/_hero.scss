@@ -142,6 +142,12 @@
         
     }
 
+    @media screen and (min-width: 500px) {
+        #portrait {
+            max-width: calc(66.66vh + 4em);
+        }
+    }
+    
     @media screen and (min-width: 600px) {
         .homepage-content{
             font-size: 0.8em;

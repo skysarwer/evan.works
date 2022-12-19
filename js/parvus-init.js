@@ -1,5 +1,5 @@
 const prvs = new Parvus({
-  gallerySelector: '.event-gallery',
+  gallerySelector: '.gallery-grid.lightbox',
   captionsSelector: '.gallery-caption',
   swipeClose: false,
 });

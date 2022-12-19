@@ -2,6 +2,10 @@
 
     position: relative;
 
+    .event-gallery {
+        display: block;
+    }
+
     li {
         height: unset !important;
         position: relative;

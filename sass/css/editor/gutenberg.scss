@@ -4,6 +4,7 @@
 @import "../../abstracts/colors";
 @import "../../abstracts/typography";
 @import "../../abstracts/mixins";
+@import "../../abstracts/structure";
 
 /* Fonts for gutenberg */ 
 @font-face {
@@ -43,6 +44,10 @@
 
 }
 
+body .edit-post-visual-editor__content-area{
+    font-size: 1.31em;
+}
+
 .editor-styles-wrapper{
 
 	overflow-x: hidden;
@@ -71,6 +76,24 @@
 			display: inline-block;
 			padding: 0 0.5em;
 			background-color: $color__background-body;
+		}
+	}
+
+	.wp-block-post-content {
+		padding-left: $spacing__total-sm;
+		padding-right: $spacing__total-sm;
+	
+		@media screen and (min-width: 600px) { 
+			padding-left: $spacing__total-md;
+			padding-right: $spacing__total-md;
+			max-width: 150ch;
+		}
+		
+		@media screen and (min-width: 1100px) { 
+			padding-left: $spacing__total-lg;
+			padding-right: $spacing__total-lg;
+			margin: 0 auto;
+			max-width: 150ch;
 		}
 	}
 
@@ -146,10 +169,6 @@
 	--------------------------------------------- */
 	@import "../../utilities/accessibility";
 
-	/* Alignments
-	--------------------------------------------- */
-	@import "../../utilities/alignments";
-
 	/* Blocks
 	--------------------------------------------- */
 	@import "../../utilities/blocks";
@@ -161,5 +180,16 @@
 	/* WP-Core Utilities
 	--------------------------------------------- */
 	@import "../../structure/content";
+	@import "../../structure/wp-core";
+
+	.block-editor-block-list__layout.is-root-container {
+		> * {
+			max-width: unset !important;
+		}
+
+		/* Alignments
+		--------------------------------------------- */
+		@import "../../utilities/alignments";
+	}
 
 }
