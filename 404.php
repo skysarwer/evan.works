@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Funky_Shrimp
+ * @package Evan_Works
  */
 
 get_header();
@@ -45,8 +45,8 @@ get_header();
 
 						<?php
 						/* translators: %1$s: smiley */
-						$funky_shrimp_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'funky-shrimp' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$funky_shrimp_archive_content" );
+						$evn_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'funky-shrimp' ), convert_smilies( ':)' ) ) . '</p>';
+						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$evn_archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );
 						?>

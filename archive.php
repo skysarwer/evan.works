@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Funky_Shrimp
+ * @package Evan_Works
  */
 
 get_header();
