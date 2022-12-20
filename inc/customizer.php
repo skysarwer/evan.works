@@ -1,6 +1,6 @@
 <?php
 /**
- * Funky Shrimp Theme Customizer
+ * Evan Works Theme Customizer
  *
  * @package evn
  */
