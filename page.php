@@ -21,10 +21,7 @@ if (is_front_page()) {
 	$var_class = '';
 }
 ?>	
-	<?php if (is_front_page()) {
-		evn_do_homepage_hero();
-	}?>
-	
+
 	<main id="primary" class="<?php echo $var_class;?>">
 		<div class="content-wrap">
 			<?php
