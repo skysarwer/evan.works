@@ -1,7 +1,7 @@
 <?php
 /**
 * Builds the index for available appointment timeslots
-* @package aber
+* @package evn
 */
 
 function evn_timeslots_ajax_url( ) {
