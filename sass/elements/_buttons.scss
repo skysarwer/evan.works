@@ -22,14 +22,8 @@ a.button,
 	&:active,
 	&:focus-visible,
 	&[aria-selected="true"] {
-		border-right: 1px solid $color__accent;
-		border-left: 1px solid $color__accent;
-		padding: 10px 16.75px;
-		padding-top: 10.5px;
 		color: $color__accent;
-		border-top: 1px solid $color__accent;
-		background: #CAE7F6;
-		
+		background: #CAE7F6;	
 	}
 
 	&:visited {
@@ -44,14 +38,7 @@ a.button,
 		stroke: currentColor;
 		vertical-align: center;
 		vertical-align: middle;
-		vertical-align: -0.425em;
-
-		.cta-arrow {
-			stroke: #960423;
-			transform: translate(0px,2px);
-			opacity: 0.7;
-		}
-		
+		vertical-align: -0.425em;	
 	}
 }
 
@@ -79,32 +66,9 @@ button.outline,
 	&:focus-visible,
 	&[aria-selected="true"] {
 		color: $color__background-body !important;
-		border-right: 1px solid #143C56;
-		border-left: 1px solid #143C56;
-		margin-right: 1px;
 		color: $color__accent;
-		border-top: 1px solid $color__accent;
 		background: #143C56 !important;
 		
 	}
 
-}
-input[type="button"].cta,
-input[type="reset"].cta,
-input[type="submit"].cta,
-button.cta,
-.is-style-cta .wp-block-button__link {
-	border-color: #CE677D;
-	background: #F1879D;
-	color: white;
-	text-shadow: #960423 0px 0px 8px;
-
-	&:hover, 
-	&:active,
-	&:focus-visible,
-	&[aria-selected="true"] {
-		background: #E37C92;
-		border-color: #994F5F;
-		text-shadow: #960423 0px 0px 8px;
-	}
 }

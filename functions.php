@@ -163,24 +163,9 @@ require get_template_directory() . '/inc/block-styles.php';
 require get_template_directory() . '/inc/enqueue.php';
 
 /**
- * Password Protect
- */
-require get_template_directory() . '/inc/password-protect.php';
-
-/**
- * Homepage Hero
- */
-require get_template_directory() . '/inc/homepage-hero.php';
-
-/**
  * Bookings
  */
-require get_template_directory() . '/inc/bookings.php';
-
-/**
- * Services Icons
- */
-require get_template_directory() . '/inc/services.php';
+//require get_template_directory() . '/inc/bookings.php';
 
 /**
  * Load Jetpack compatibility file.
