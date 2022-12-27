@@ -30,7 +30,7 @@
 }
 
 .has-page .entry-content {
-	width: calc(45rem + 8vw);
+	@include entry-content;
 }
 
 .entry-header {
