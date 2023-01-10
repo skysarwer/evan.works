@@ -13,3 +13,8 @@ img {
 figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
+
+.wp-block-embed.is-type-video iframe {
+	width: 100%;
+	height: 75vh;
+}
