@@ -12,14 +12,12 @@
  * @package evn
  */
 
- 
+$var_class= '';
 if (is_front_page()) {
-	get_header('', array('is_homepage' => true));
 	$var_class = 'homepage';
-} else {
-	get_header();
-	$var_class = '';
-}
+} 
+
+get_header();
 ?>	
 
 	<main id="primary" class="<?php echo $var_class;?>">
