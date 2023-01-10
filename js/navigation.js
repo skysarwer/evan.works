@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
+( function($) {
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation doesn't exist.
@@ -55,8 +55,10 @@
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
 
-	// Get all the link elements with children within the menu.
-	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+	const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children a, .page_item_has_children a' );
+
+	// Get all the submenu toggle buttons within the menu.
+	const submenuToggles = menu.querySelectorAll( '.menu-item-has-children .submenu-toggle, .page_item_has_children .submenu-toggle' );
 
 	// Toggle focus each time a menu link is focused or blurred.
 	for ( const link of links ) {
@@ -67,6 +69,26 @@
 	// Toggle focus each time a menu link with children receive a touch event.
 	for ( const link of linksWithChildren ) {
 		link.addEventListener( 'touchstart', toggleFocus, false );
+	}
+
+	for ( const toggle of submenuToggles ) {
+
+		const submenu = document.getElementById( toggle.getAttribute('aria-controls') );
+
+		// Toggle the the .toggled class and the aria-expanded value each time a .submenu-toggle button is clicked.
+		toggle.addEventListener( 'click', function() {
+			$(submenu).slideToggle( );
+
+			if ( toggle.getAttribute( 'aria-expanded' ) === 'true' ) {
+				toggle.innerHTML = '+'
+				toggle.setAttribute( 'aria-expanded', 'false' );
+				toggle.setAttribute( 'aria-label',  'Expand ' + toggle.getAttribute( 'data-labelvalue' ) +  'sub-menu');
+			} else {
+				toggle.innerHTML = '-'
+				toggle.setAttribute( 'aria-expanded', 'true' );
+				toggle.setAttribute( 'aria-label',  'Collapse ' + toggle.getAttribute( 'data-labelvalue' ) +  'sub-menu');
+			}
+		} );
 	}
 
 	/**
@@ -96,4 +118,4 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
-}() );
+})(jQuery);

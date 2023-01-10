@@ -183,6 +183,11 @@ require get_template_directory() . '/inc/bookings.php';
 require get_template_directory() . '/inc/services.php';
 
 /**
+ * Navigation
+ */
+require get_template_directory() . '/inc/navigation.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

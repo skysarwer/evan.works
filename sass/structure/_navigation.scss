@@ -6,56 +6,64 @@
 	max-width: 70%;
 
 	ul {
-		display: none;
-		list-style: none;
+		visibility: hidden;
 		margin: 0;
 		padding-left: 0;
 		gap: 1em;
+		transition: 0.25s;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
+		@media screen and (min-width: 600px) {
+			.sub-menu {
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				float: left;
+				position: absolute;
+				top: 100%;
 				left: -999em;
-				top: 0;
-			}
+				z-index: 99999;
+				background: $color__accent-dark;
+				padding-left: 1em;
+				color: white;
 
-			li {
+				ul {
+					//display: none;
+					left: -999em;
+					top: 0;
+				}
 
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
+				li {
+
+					&:hover > ul,
+					&.focus > ul {
+						display: block;
+						left: auto;
+					}
+				}
+
+				a {
+					width: 200px;
+				}
+
+				:hover > a,
+				.focus > a {
+				}
+
+				a:hover,
+				a.focus {
 				}
 			}
 
-			a {
-				width: 200px;
+			li:hover > ul,
+			li.focus > ul {
+				left: auto;
 			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
 		}
 	}
 
 	li {
 		position: relative;
 		font-family: $font__semibold;
+		margin-bottom: 0;
+		padding-bottom: 0.5em;
 	}
 
 	a {
@@ -78,32 +86,50 @@
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	visibility: visible;
 }
 
 @media screen and (max-width: (37.49em)) {
+
+	.sub-menu {
+		display: none;
+		visibility: visible !important;
+		font-size: 0.9em;
+		padding-left: 1em !important;
+	}
+
+	.menu-menu-container {
+		position: fixed;
+		display: flex;
+		align-items: space-between;
+		transition: 0.25s;
+		z-index: 999;
+		height: 100vh;
+		width: 100%;
+		right: 0;
+		top: 0;
+		padding-left: 2em;
+		padding-right: 1em;
+	}
+
 	#primary-menu .nav-menu,
 	#primary-menu.nav-menu  {
 		position: absolute;
 		width: max-content;
-		right: 0;
-		background: $color__accent;
+		transition: 0.25s;
 		padding: 1em;
 		margin-top: 1em;
 		color: #fff;
 		z-index: 999;
 
-		&::before {
-			content: '';
-			display: block;
-			width: 0;
-			height: 0;
-			position: absolute;
-			border-left: 8px solid transparent;
-			border-right: 8px solid transparent;
-			border-bottom: 8px solid $color__accent;
-			top: -0.5em;
-			right: 0;
+		li button {
+			border: 0 !important;
+			font-family: $font__bold;
+
+			&:hover, &:focus {
+				color: $color__accent !important;
+				background-color: transparent !important;
+			}
 		}
 	}
 }
@@ -113,6 +139,12 @@
 }
 
 @media screen and (min-width: 600px) {
+
+	#primary-menu {
+		li button {
+			display: none;
+		}
+	}
 
 	.main-navigation {
 		right: 2em;

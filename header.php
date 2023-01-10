@@ -50,6 +50,8 @@ if ($args['is_homepage'] === true) {
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>' ,
+					'walker' => new EVN_Menu_Walker()
 				)
 			);
 			?>
