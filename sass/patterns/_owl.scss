@@ -34,7 +34,7 @@
 
     &:hover, &:focus {
         svg {
-            stroke: $color__accent;
+            stroke: currentColor;
         }
     }
 }
