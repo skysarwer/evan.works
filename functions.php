@@ -168,6 +168,11 @@ require get_template_directory() . '/inc/enqueue.php';
 //require get_template_directory() . '/inc/bookings.php';
 
 /**
+ * Navigation
+ */
+require get_template_directory() . '/inc/navigation.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
