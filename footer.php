@@ -11,23 +11,6 @@
 
 ?>
 
-<div id="work-with-me" class="dialog-container" aria-label="<?php _e('Get in touch', 'evn');?>" 
-	aria-hidden="true" data-a11y-dialog="contact_cta" class="dialog-container">
-	<div data-a11y-dialog-hide class="dialog-overlay"></div>
-	<button class="outline ribbon" type="button" title="Close sidebar" data-a11y-dialog-hide aria-label="Close sidebar">
-		Work with me
-		<?php echo evn_cta_arrow_svg();?>
-	</button>
-	<div role="document" class="dialog-content sidebar">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-  	</div>
-</div>
-
-<button class="cta ribbon" type="button" data-a11y-dialog-show="contact_cta">
-  Work with me
-  <?php echo evn_cta_arrow_svg();?>
-</button>
-
 </div><!-- #page -->
 
 <footer id="colophon" class="site-footer content-wrap">
