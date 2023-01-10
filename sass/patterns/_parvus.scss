@@ -377,7 +377,7 @@
   }
 
   .parvus__btn[disabled] {
-    display: none;
+    opacity: 0.5;
   }
   .parvus__counter {
     position: relative;
