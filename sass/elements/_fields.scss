@@ -28,7 +28,7 @@ textarea {
 	}
 
 	&:hover:not(:focus) {
-		background-color: #F4FCFF;
+		background-color: $color__accent-light;
 	  }
 }
 
@@ -101,7 +101,7 @@ input[type="checkbox"], input[type="radio"] {
 	border-radius: 2px;
 
 	&:hover {
-		background-color: #F4FCFF;
+		background-color: $color__accent-light;
 	}
 }
 
@@ -118,16 +118,16 @@ input[type="radio"] {
 			height: 0.45em;
 			left: 0.0875em;
 			top: 15.5%;
-			background: #2A5B7A;
+			background: $color__accent;
 			border-radius: 100%;
 			pointer-events: none;
 		}
 
 		&:hover {
-			border-color: #143C56;
+			border-color: $color__accent-dark;
 
 			&::before {
-				background: #143C56;
+				background: $color__accent-dark;
 			}
 		}
 		
@@ -153,8 +153,8 @@ input[type="checkbox"] {
 		}
 
 		&:hover {
-			background-color: #143C56;
-			border-color: #143C56;
+			background-color: $color__accent-dark;
+			border-color: $color__accent-dark;
 		}
 		
 	}
@@ -169,13 +169,13 @@ input[type="file"] {
 
 input[type="file"]::webkit-file-upload-button,
 input[type="file"]::file-selector-button {
-	background-color: #F4FCFF;
+	background-color: $color__accent-light;
 } 
 
 input[type="file"]:hover::webkit-file-upload-button, 
 input[type="file"]:hover::file-selector-button  {
 
-	background-color: #CAE7F6;
+	background-color: $color__accent-light;
 }
 
 /*Custom CF7 Booking Fieldset*/
