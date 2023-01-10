@@ -61,7 +61,7 @@ function evn_parent_menu_dropdown( $item_output, $item, $depth, $args ) {
 
     if ( ! empty( $item->classes ) && in_array( 'menu-item-has-children', $item->classes ) ) {
         $stripped_item_output = preg_replace('/<a[^>]*>(.*)<\/a>/', '$1', $item_output);
-        return '<span class="flex">'.$item_output . '<button class="submenu-toggle outline" aria-expanded="false" data-labelvalue="'.$stripped_item_output.'" aria-label="Expand '.$stripped_item_output.' sub-menu" aria-controls="submenu-'.$args->item_id.'">+</button></span>';
+        return '<span class="flex">'.$item_output . '<button class="submenu-toggle outline" aria-expanded="false"  aria-label="'.$stripped_item_output.' sub-menu" aria-controls="submenu-'.$args->item_id.'">+</button></span>';
     }
 
     return $item_output;

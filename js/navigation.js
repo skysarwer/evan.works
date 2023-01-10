@@ -82,11 +82,9 @@
 			if ( toggle.getAttribute( 'aria-expanded' ) === 'true' ) {
 				toggle.innerHTML = '+'
 				toggle.setAttribute( 'aria-expanded', 'false' );
-				toggle.setAttribute( 'aria-label',  'Expand ' + toggle.getAttribute( 'data-labelvalue' ) +  'sub-menu');
 			} else {
 				toggle.innerHTML = '-'
 				toggle.setAttribute( 'aria-expanded', 'true' );
-				toggle.setAttribute( 'aria-label',  'Collapse ' + toggle.getAttribute( 'data-labelvalue' ) +  'sub-menu');
 			}
 		} );
 	}
