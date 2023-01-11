@@ -1,15 +1,10 @@
 :root {
     --parvus-transition-duration: 300ms;
-    
     --parvus-transition-timing-function: cubic-bezier(0.4, 0, 0.22, 1);
     --parvus-overlay-color: rgba(0, 17, 27, 0.925);
-    --parvus-overlay-text: hsl(0, 0%, 100%);
-    --parvus-button-color: #fff;
     --parvus-button-text: hsl(0, 0%, 100%);
-    --parvus-button-hover-color: hsl(229, 24%, 33%);
-    --parvus-button-hover-text: hsl(0, 0%, 100%);
-    --parvus-loader-background-color: hsl(23, 40%, 96%);
-    --parvus-loader-color: hsl(228, 24%, 23%);
+    --parvus-loader-background-color: $color__accent-light;
+    --parvus-loader-color: $color__accent;
   }
   
   /**
@@ -281,7 +276,7 @@
   .parvus__loader {
     display: inline-block;
     padding: 3em;
-    background: #fff;
+    background: transparent;
     box-sizing: border-box !important;
     overflow: visible !important;
     height: 10em !important;
@@ -292,6 +287,7 @@
     width: 10em !important;
     max-width: 10em;
     max-height: 10em;
+    z-index: 9999;
   }
   .parvus__loader::before {
     animation: spin 1s infinite;
@@ -300,11 +296,12 @@
     border-top-color: var(--parvus-loader-color);
     bottom: 0;
     content: "";
-    left: 0;
+    left: 8%;
     position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+    top: 8%;
+    z-index: 9999;
+    width: 84%;
+    height: 84%;
   }
   .parvus__toolbar {
     align-items: center;
