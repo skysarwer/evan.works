@@ -67,8 +67,7 @@ button.outline,
 	&[aria-selected="true"] {
 		color: $color__background-body !important;
 		color: $color__accent;
-		background: #143C56 !important;
-		
+		background: $color__accent-dark !important;		
 	}
 
 }
