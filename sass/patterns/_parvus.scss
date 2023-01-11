@@ -104,7 +104,6 @@
       
       .parvus__slide .parvus__caption {
       position: fixed;
-      left: 0;
       bottom: 0;
       background: var(--parvus-overlay-color);
       display: block;
@@ -114,7 +113,7 @@
       text-align: center;
       opacity: 0;
       z-index: 999999;
-      /*&::after {
+      &::after {
         content: '';
         position: absolute;
         top: -2em;
@@ -127,7 +126,7 @@
         background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--parvus-overlay-color) 100%);
         background: -o-linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--parvus-overlay-color) 100%);	
         pointer-events: none;
-      }*/
+      }
       }
       
       .parvus__slide .parvus__caption:hover {
@@ -276,7 +275,7 @@
     margin-right: auto;
     transform-origin: left top;
     object-fit: contain;
-    width: auto !important;
+    width: 100% !important;
     transition: var(--parvus-transition-duration);
   }
   .parvus__loader {
