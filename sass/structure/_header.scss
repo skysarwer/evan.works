@@ -43,6 +43,18 @@ header.site-header {
         }
     }
 
+    
+    &.homepage *:focus {
+        outline: 2px dotted #fff;
+    }
+
+    &.homepage {
+        position: sticky;
+        top: 0;
+        color: #fff;
+        z-index: 9;
+    }
+
     .menu-toggle {
         background: none;
         border: none;
@@ -80,18 +92,7 @@ header.site-header {
             }
         }
     }
-
-    &.homepage *:focus {
-        outline: 2px dotted #fff;
-    }
-
-    &.homepage {
-        @media screen and (min-width: 600px) {
-            .nav-menu {
-                color: #fff;
-            }
-        }
-    }
+    
 }
 
 body:not(.overflow-hidden) header.site-header.homepage {
