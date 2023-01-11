@@ -93,11 +93,18 @@
 
 @media screen and (max-width: (37.49em)) {
 
-	.sub-menu {
+	.main-navigation #primary-menu.nav-menu .sub-menu {
 		display: none;
 		visibility: visible !important;
 		font-size: 0.9em;
 		padding-left: 1em !important;
+		margin-top: 1em;
+		list-style: circle;
+
+		li:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 
 	.menu-menu-container {
@@ -113,10 +120,13 @@
 		padding-left: 2em;
 		padding-right: 1em;
 		pointer-events: none;
+		z-index: -1;
 	}
 
 	.main-navigation.toggled .menu-menu-container {
 		pointer-events: auto;
+		background-color: $color__accent-light;
+		transition: 0.15s;
 	}
 
 	#primary-menu .nav-menu,
@@ -125,20 +135,39 @@
 		width: max-content;
 		transition: 0.25s;
 		padding: 1em;
+		padding-top: 8em;
+		font-size: 1.25em;
 		margin-top: 1em;
-		color: #fff;
+		color: #000;
 		z-index: 999;
+		transform: translateY(1em);
+		opacity: 0;
+		transition: 0.25s ease-in;
 
-		li button {
-			border: 0 !important;
-			font-family: $font__bold;
-
-			&:hover, &:focus {
-				color: $color__accent !important;
+		li {
+			margin-bottom: 1.5em;
+			button {
+				border: 0 !important;
 				background-color: transparent !important;
+				font-family: $font__bold;
+				color: $color__accent !important;
+				padding: 0;
+				margin-left: 1em;
+
+				&:hover, &:focus {
+					color: $color__accent !important;
+					background-color: transparent !important;
+				}
 			}
 		}
 	}
+}
+
+.main-navigation.toggled #primary-menu .nav-menu,
+.main-navigation.toggled #primary-menu.nav-menu  {
+	transition: 0.35s ease-in;
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .social-media {
