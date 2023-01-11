@@ -13,9 +13,10 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-*:focus {
+*:focus-visible {
 	outline: 2px dotted $color__accent;
-	outline-offset: 1px;
+	outline-offset: 3px;
+	transition: 0.2s ease-in;
 }
 
 html {
