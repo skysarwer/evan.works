@@ -15,7 +15,7 @@
 
 $var_class = '';
 
-if ($args['is_homepage'] === true) {
+if (isset($args['is_homepage']) && $args['is_homepage'] === true) {
 	$var_class .= 'homepage';
 }
 

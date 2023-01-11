@@ -9,6 +9,10 @@
     top: 0;
     overflow: hidden;
 
+    *:focus {
+        outline: 2px dotted #fff;
+    }
+
     h1 {
         color: #fff;
         margin-top: 0;

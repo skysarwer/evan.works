@@ -24,7 +24,7 @@ header.site-header {
         position: relative;
        // transition: 0.2s ease-in;
         border-top: 3px solid black;
-        transform: rotate(2deg);
+        transform: rotate(1.5deg);
 
         transition: opacity 0.2s ease-in 0.2s;        
     }
@@ -49,6 +49,14 @@ header.site-header {
         padding: 0;
         z-index: 9999;
 
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px dotted #fff;
+        }
+
         &[aria-expanded="true"] {
             .nav-bar {
                 &:nth-child(2) {
@@ -71,6 +79,29 @@ header.site-header {
                 }
             }
         }
+    }
+
+    &.homepage *:focus {
+        outline: 2px dotted #fff;
+    }
+
+    &.homepage {
+        @media screen and (min-width: 600px) {
+            .nav-menu {
+                color: #fff;
+            }
+        }
+    }
+}
+
+body:not(.overflow-hidden) header.site-header.homepage {
+
+    .logo svg path, .logo svg polygon {
+        fill: #fff;
+    }
+
+    .nav-bar {
+        border-color: #fff;
     }
 }
 
@@ -105,10 +136,10 @@ header.site-header {
     }
 
     50% {
-        transform: translateY(0.525em) rotate(2deg);
+        transform: translateY(0.525em) rotate(1.5deg);
     }
     100% {
-        transform: rotate(2deg);
+        transform: rotate(1.5deg);
     }
 }
 
@@ -119,10 +150,10 @@ header.site-header {
     }
 
     50% {
-        transform: translateY(-0.525em) rotate(2deg);
+        transform: translateY(-0.525em) rotate(1.5deg);
     }
     100% {
-        transform: rotate(2deg);
+        transform: rotate(1.5deg);
     }
 }
 
