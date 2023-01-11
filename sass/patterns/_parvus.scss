@@ -275,7 +275,7 @@
     margin-right: auto;
     transform-origin: left top;
     object-fit: contain;
-    width: auto !important;
+    width: 100% !important;
     transition: var(--parvus-transition-duration);
   }
   .parvus__loader {
