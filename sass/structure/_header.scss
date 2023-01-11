@@ -25,23 +25,21 @@ header.site-header {
        // transition: 0.2s ease-in;
         border-top: 3px solid black;
 
-        transition: opacity 0.2s ease-in 0.2s;
-     
+        transition: opacity 0.2s ease-in 0.2s;        
+    }
+
+    .main-navigation.untoggled {
+        
+       .nav-bar {
 
             &:nth-child(2) {
-                // transform: rotate(45deg) scaleX(1.125);
-                // transform-origin: 8px 7px;
-            animation: nav-bar-top-rvs 0.4s ease-in forwards;
-            //  transform: translateY(0.525em) rotate(45deg);
-            
+             
+                animation: nav-bar-top-rvs 0.4s ease-in forwards;
             }
             &:nth-child(4) {
-                animation: nav-bar-bottom-rvs 0.4s ease-in forwards;
-                transform-origin: top;
-                //transform: translateY(-0.525em) rotate(-45deg);
-                
+                animation: nav-bar-bottom-rvs 0.4s ease-in forwards;    
             }
-        
+        }
     }
 
     .menu-toggle {

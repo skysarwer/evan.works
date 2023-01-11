@@ -38,9 +38,11 @@
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 			document.querySelector("body").classList.remove("overflow-hidden");
+			siteNavigation.classList.add("untoggled");
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 			document.querySelector("body").classList.add("overflow-hidden");
+			siteNavigation.classList.remove("untoggled");
 			//Scroll to top when opening menu -- important if header is not fixed
 			window.scrollTo(0, 0);
 		}
