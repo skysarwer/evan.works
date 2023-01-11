@@ -24,7 +24,6 @@ header.site-header {
         position: relative;
        // transition: 0.2s ease-in;
         border-top: 3px solid black;
-        transform: rotate(2deg);
 
         transition: opacity 0.2s ease-in 0.2s;
      
@@ -107,10 +106,10 @@ header.site-header {
     }
 
     50% {
-        transform: translateY(0.525em) rotate(2deg);
+        transform: translateY(0.525em);
     }
     100% {
-        transform: rotate(2deg);
+        transform: none;
     }
 }
 
@@ -121,10 +120,10 @@ header.site-header {
     }
 
     50% {
-        transform: translateY(-0.525em) rotate(2deg);
+        transform: translateY(-0.525em);
     }
     100% {
-        transform: rotate(2deg);
+        transform: none;
     }
 }
 
