@@ -11,6 +11,7 @@
 		padding-left: 0;
 		gap: 1em;
 		transition: 0.25s;
+		list-style: none;
 
 		@media screen and (min-width: 600px) {
 			.sub-menu {
@@ -22,12 +23,13 @@
 				z-index: 99999;
 				background: $color__accent-dark;
 				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: 1em;
+				padding-bottom: 1em;
 				color: white;
 
 				ul {
-					//display: none;
-					left: -999em;
-					top: 0;
+					display: none;
 				}
 
 				li {
@@ -110,6 +112,11 @@
 		top: 0;
 		padding-left: 2em;
 		padding-right: 1em;
+		pointer-events: none;
+	}
+
+	.main-navigation.toggled .menu-menu-container {
+		pointer-events: auto;
 	}
 
 	#primary-menu .nav-menu,
@@ -157,6 +164,7 @@
 	.main-navigation ul {
 		display: flex;
 		flex-wrap: wrap;
+		visibility: visible;
 	}
 }
 
