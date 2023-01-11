@@ -21,11 +21,10 @@ header.site-header {
         height: 0.4em;
         margin-bottom: 0.125em;
         display: block;
-        background: #000;
-        border-radius: 22%;
         position: relative;
         transition: 0.2s;
-        border-top: 1.75px solid black;
+        border-top: 3px solid black;
+        transform: rotate(3deg);
     }
 
     .menu-toggle {
