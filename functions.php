@@ -196,3 +196,62 @@ return array_merge( $sizes, array(
 	) );
 }
 add_filter( 'image_size_names_choose','evn_custom_image_sizes' );
+
+// Add the second editor to the post editor
+add_action( 'add_meta_boxes', 'add_title_banner_editor' );
+function add_title_banner_editor() {
+    add_meta_box( 'title-banner-editor', 'Title Banner', 'title_banner_editor_html', 'post', 'normal', 'high' );
+}
+
+function title_banner_editor_html( $post ) {
+    wp_nonce_field( 'title_banner_editor_nonce', 'title_banner_editor' );
+    $content = get_post_meta( $post->ID, 'title_banner', true );
+    echo '<div class="title-banner-editor">';
+    if ( !empty( $content ) ) {
+        echo render_block( json_decode( $content, true ) );
+    }
+    echo '<button id="add-title-banner-blocks" class="button">Add Blocks</button>';
+    echo '</div>';
+    echo '<script>bindButton();</script>';
+}
+
+
+
+// Enqueue the script that opens the block editor modal
+add_action( 'admin_enqueue_scripts', 'my_theme_enqueue_scripts' );
+function my_theme_enqueue_scripts() {
+    wp_enqueue_script( 'my-theme-script', get_template_directory_uri() . '/js/my-theme-script.js', array( 'wp-blocks', 'wp-i18n', 'wp-element' ) );
+    wp_localize_script( 'my-theme-script', 'my_theme_data', array(
+        'title_banner_nonce' => wp_create_nonce( 'title_banner_editor_nonce' ),
+        'title_banner_post_id' => get_the_ID(),
+    ) );
+}
+
+
+// Save the second editor's content to the "title_banner" meta key when the post is saved
+add_action( 'save_post', 'save_title_banner_editor' );
+function save_title_banner_editor( $post_id ) {
+    if ( ! isset( $_POST['title_banner_editor'] ) || ! wp_verify_nonce( $_POST['title_banner_editor'], 'title_banner_editor_nonce' ) ) {
+        return;
+    }
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+    if ( isset( $_POST['blocks'] ) ) {
+        update_post_meta( $post_id, 'title_banner', wp_slash( wp_json_encode( $_POST['blocks'] ) ) );
+    }
+}
+
+add_action( 'wp_ajax_save_title_banner', 'save_title_banner_callback' );
+function save_title_banner_callback() {
+    check_ajax_referer( 'title_banner_editor_nonce', 'nonce' );
+    $post_id = intval( $_POST['post_id'] );
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        wp_send_json_error();
+    }
+    update_post_meta( $post_id, 'title_banner', $_POST['title_banner'] );
+    wp_send_json_success();
+}
