@@ -32,6 +32,7 @@
 @mixin entry-content {
 	padding-left: $spacing__content-sm;
 	padding-right: $spacing__content-sm;
+	overflow-x: hidden;
 
 	@media screen and (min-width: 600px) { 
 		padding-left: $spacing__content-md;
@@ -68,6 +69,18 @@
 		display: inline-block;
 		padding: 0 0.5em;
 		max-width: 15em;
-		background-color: $color__background-body;
+		position: relative;
+		z-index: 3;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background-color: $color__background-body;
+			z-index: -1;
+		}
 	}
 }
