@@ -166,4 +166,10 @@
 		@import "../../utilities/alignments";
 	}
 
+	button.components-button {
+		text-transform: none;
+		box-shadow: none;
+		text-shadow: none; 
+	}
+
 }
