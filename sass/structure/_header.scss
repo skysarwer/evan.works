@@ -56,8 +56,10 @@ header.site-header {
         color: #fff;
         z-index: 9;
 
-        .submenu-toggle, .submenu-toggle:focus, .submenu-toggle:hover {
-            color: #fff !important;
+        @media screen and (min-width: 600px) {
+            .submenu-toggle, .submenu-toggle:focus, .submenu-toggle:hover {
+                color: #fff !important;
+            }
         }
     }
 
