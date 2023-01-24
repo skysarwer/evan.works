@@ -44,5 +44,13 @@ function evn_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_dequeue_script('booked-functions-js');
+	wp_dequeue_script('booked-frontend-js-extra');
+	wp_dequeue_script('booked-fea-js-js-extra');
+	wp_dequeue_script('booked-fea-js-js');
+	wp_dequeue_script('booked-spin-js-js');
+	wp_dequeue_script('booked-spin-jquery-js');
+	wp_dequeue_script('booked-tooltipster-js');
 }
 add_action( 'wp_enqueue_scripts', 'evn_scripts' );
