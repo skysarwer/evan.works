@@ -13,6 +13,11 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+::selection, ::-moz-selection {
+	background: $color__accent;
+	color: #fff;
+}
+
 *:focus {
 	outline: 2px dotted $color__accent;
 	outline-offset: 1px;
