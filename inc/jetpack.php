@@ -33,7 +33,7 @@ function evn_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'funky-shrimp-style',
+				'stylesheet' => 'evn-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
