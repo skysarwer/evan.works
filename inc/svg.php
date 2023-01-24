@@ -112,6 +112,16 @@ function evn_cta_arrow_svg() {
 }
 
 
+function evn_caret_thick_svg() {
+    return '
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.0966614in" height="0.0633307in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 9666 6333"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+      <polygon points="4833,6000 9167,1833 7833,500 4833,3500 1848,467 500,1833 "/>
+    </svg>    
+    ';
+}
+
 /***
 * Services svgs
 **/ 
