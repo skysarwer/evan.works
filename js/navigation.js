@@ -118,11 +118,11 @@
 		toggle.addEventListener( 'click', function() {
 
 			if ( toggle.getAttribute( 'aria-expanded' ) === 'true' ) {
-				toggle.innerHTML = '+'
+				//toggle.innerHTML = '+'
 				toggle.setAttribute( 'aria-expanded', 'false' );
 				submenu.classList.remove( 'toggled' );
 			} else {
-				toggle.innerHTML = '-'
+				//toggle.innerHTML = '-'
 				toggle.setAttribute( 'aria-expanded', 'true' );
 				submenu.classList.add( 'toggled' );
 			}

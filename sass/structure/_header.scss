@@ -55,6 +55,10 @@ header.site-header {
         top: 0;
         color: #fff;
         z-index: 9;
+
+        .submenu-toggle, .submenu-toggle:focus, .submenu-toggle:hover {
+            color: #fff !important;
+        }
     }
 
     .menu-toggle {

@@ -1,3 +1,10 @@
+.site-header.homepage, .homepage-hero {
+    ::selection, ::-moz-selection {
+        background: #fff;
+        color: $color__accent;
+    }
+}
+
 .homepage-hero {
     background: $color__accent;
     color: #fff;
