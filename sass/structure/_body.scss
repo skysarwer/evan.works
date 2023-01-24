@@ -23,6 +23,12 @@ textarea {
 	outline-offset: 2px;
 }
 
+#evnFilter {
+	position: absolute;
+	height: 0;
+}
+
 html {
 	scroll-behavior: smooth;
 }
+
