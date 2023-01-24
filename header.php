@@ -46,7 +46,7 @@ if (isset($args['is_homepage']) && $args['is_homepage'] === true) {
         <!-- EXTRUDED BEVEL -->
          <feConvolveMatrix order="3,3" divisor="1" kernelMatrix="1 0 0 0 1 0 0 0 1" in="STROKE_10" result="BEVEL_20"></feConvolveMatrix>
 
-          <feOffset dx="2" dy="3" in="BEVEL_20" result="BEVEL_25"></feOffset>
+          <feOffset dx="2" dy="2" in="BEVEL_20" result="BEVEL_25"></feOffset>
           <feComposite operator="out" in="BEVEL_25" in2="STROKE_10" result="BEVEL_30"></feComposite>
           <feComposite in="COLOR-accent" in2="BEVEL_30" operator="in" result="BEVEL_40"></feComposite>
           <feMerge result="BEVEL_50">

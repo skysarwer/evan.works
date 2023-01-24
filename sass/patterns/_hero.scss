@@ -25,7 +25,7 @@
         margin-top: 0;
        filter: url(#titleFilter);
        -webkit-filter: url(#titleFilter);
-        font-size: 2.25em;
+       font-size: 2.25em;
     }
 
     p {
@@ -165,6 +165,10 @@
     @media screen and (min-width: 600px) {
         .homepage-content{
             font-size: 0.8em;
+
+            h1 {
+                font-size: 2em;
+            }
         }
     }
 
