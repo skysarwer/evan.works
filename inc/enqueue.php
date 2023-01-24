@@ -31,7 +31,7 @@ function evn_scripts() {
 	
 	wp_enqueue_style( 'evn-style', get_stylesheet_uri(), array(), EVN_VERSION );
 
-	wp_enqueue_script( 'evn-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), EVN_VERSION, true );
+	wp_enqueue_script( 'evn-navigation', get_template_directory_uri() . '/js/navigation.js', array(), EVN_VERSION, true );
 
 	wp_enqueue_script( 'evn-cta-sidebar', get_template_directory_uri() . '/js/cta-sidebar.js', array(), EVN_VERSION, true );
 
