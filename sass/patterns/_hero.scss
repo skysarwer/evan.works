@@ -56,7 +56,7 @@
         font-size: 0.7em;
 
         > div:first-child {
-            width: 27em;
+            width: 32em;
             max-width: 100%;
             position: relative;
             z-index: 9;
@@ -80,7 +80,7 @@
         position: absolute;
         height: calc(100vh + 6em);
         bottom: 0;
-        left: 40%;
+        left: 42.5%;
         width: max-content;
         
         img {
@@ -134,10 +134,28 @@
             }
         }
 
+    }
+
+    @media screen and (max-width: 1024px) and (orientation: portrait) {
         .homepage-content {
             margin-top: calc(14vh + 2em);
-            font-size: 0.8em;
         }
+    }
+
+    @media screen and (max-width: 400px) and (orientation: portrait) {
+        .homepage-content {
+            margin-top: calc(2vh + 6em);
+            font-size: 0.8em;
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        .homepage-bottom {
+            bottom: 18vh;
+        }
+
 
     }
 

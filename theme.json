@@ -33,7 +33,7 @@
 						},
 						{
 							"slug": "large",
-							"size": "1.25em",
+							"size": "1.1em",
 							"name": "large"
 						},
 						{
@@ -62,39 +62,29 @@
 				"typography": {
 					"fontSizes": [
 						{
-							"slug": "small",
-							"size": "0.8em",
+							"slug": "heading-small",
+							"size": "1em",
 							"name": "Small"
 						},
 						{
-							"slug": "normal",
-							"size": "1em",
-							"name": "Normal"
-						},
-						{
-							"slug": "large",
-							"size": "1.25em",
+							"slug": "heading-large",
+							"size": "2.5em",
 							"name": "large"
 						},
 						{
-							"slug": "extra-large",
-							"size": "1.5em",
+							"slug": "heading-extra-large",
+							"size": "3em",
 							"name": "Extra Large"
 						},
 						{
-							"slug": "double",
-							"size": "2em",
-							"name": "Double"
-						},
-						{
-							"slug": "huge",
-							"size": "2.5em",
+							"slug": "heading-huge",
+							"size": "3.5em",
 							"name": "Huge"
 						},
 						{
-							"slug": "triple",
-							"size": "3em",
-							"name": "Triple"
+							"slug": "heading-massive",
+							"size": "4.5em",
+							"name": "Massive"
 						}
 					]
 				}
@@ -104,57 +94,9 @@
 			"defaultPalette": false,
 			"custom": true,
 			"link": true,
+			"duotone": [],
+      		"customDuotone": false,
             "palette": [
-				{
-					"slug": "pink",
-					"color": "#ffd4d7",
-					"name": "Pink"
-				},
-				{
-					"slug": "dark-pink",
-					"color": "#E17568",
-					"name": "Dark Pink"
-				},
-                {
-					"slug": "light-green",
-					"color": "#92dcdd",
-					"name": "Light Green"
-				},
-				{
-					"slug": "dark-green",
-					"color": "#30bb9c",
-					"name": "Dark Green"
-				},
-				{
-					"slug": "purple",
-					"color": "#757494",
-					"name": "Purple"
-				},
-                {
-					"slug": "orange",
-					"color": "#e89858",
-					"name": "Orange"
-				},
-                {
-					"slug": "dark-grey",
-					"color": "#333",
-					"name": "Dark Grey"
-				},
-                {
-					"slug": "light-grey",
-					"color": "#555",
-					"name": "Light Grey"
-				},
-                {
-					"slug": "white",
-					"color": "#fff",
-					"name": "White"
-				},
-                {
-					"slug": "black",
-					"color": "#000",
-					"name": "Black"
-				}
 			]
 
 		},
