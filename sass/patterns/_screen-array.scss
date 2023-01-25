@@ -1,12 +1,9 @@
-.screen-array {
+.gallery-grid.screen-array {
 
     position: relative;
+    display: block;
 
-    .event-gallery {
-        display: block;
-    }
-
-    li {
+    .gallery-image {
         height: unset !important;
         position: relative;
        

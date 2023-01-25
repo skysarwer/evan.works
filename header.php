@@ -32,31 +32,33 @@ if (isset($args['is_homepage']) && $args['is_homepage'] === true) {
 </head>
 
 <body>
-<svg version="1.1" id="evnFilter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 220" preserveAspectRatio="xMidYMid keep">
-    <defs>
-      <filter id="titleFilter">
-        <!-- COLORS -->
-          <feFlood flood-color="#143C56" result="COLOR-accent"></feFlood>
-        <!-- COLORS END -->
+<?php if (is_front_page()) : ?>
+	<svg version="1.1" id="evnFilter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460 220" preserveAspectRatio="xMidYMid keep">
+		<defs>
+		<filter id="titleFilter">
+			<!-- COLORS -->
+			<feFlood flood-color="#143C56" result="COLOR-accent"></feFlood>
+			<!-- COLORS END -->
 
-        <!-- STROKE -->
-          <feMorphology operator="dilate" radius="2" in="SourceAlpha" result="STROKE_10"></feMorphology>
-        <!-- STROKE END -->
+			<!-- STROKE -->
+			<feMorphology operator="dilate" radius="1" in="SourceAlpha" result="STROKE_10"></feMorphology>
+			<!-- STROKE END -->
 
-        <!-- EXTRUDED BEVEL -->
-         <feConvolveMatrix order="3,3" divisor="1" kernelMatrix="1 0 0 0 1 0 0 0 1" in="STROKE_10" result="BEVEL_20"></feConvolveMatrix>
+			<!-- EXTRUDED BEVEL -->
+			<feConvolveMatrix order="3,3" divisor="1" kernelMatrix="1 0 0 0 1 0 0 0 1" in="STROKE_10" result="BEVEL_20"></feConvolveMatrix>
 
-          <feOffset dx="2" dy="2" in="BEVEL_20" result="BEVEL_25"></feOffset>
-          <feComposite operator="out" in="BEVEL_25" in2="STROKE_10" result="BEVEL_30"></feComposite>
-          <feComposite in="COLOR-accent" in2="BEVEL_30" operator="in" result="BEVEL_40"></feComposite>
-          <feMerge result="BEVEL_50">
-            <feMergeNode in="BEVEL_40"></feMergeNode>
-            <feMergeNode in="SourceGraphic"></feMergeNode>
-          </feMerge>
-         <!-- EXTRUDED BEVEL END -->
-      </filter>
-    </defs>
-  </svg>
+			<feOffset dx="1" dy="2" in="BEVEL_20" result="BEVEL_25"></feOffset>
+			<feComposite operator="out" in="BEVEL_25" in2="STROKE_10" result="BEVEL_30"></feComposite>
+			<feComposite in="COLOR-accent" in2="BEVEL_30" operator="in" result="BEVEL_40"></feComposite>
+			<feMerge result="BEVEL_50">
+				<feMergeNode in="BEVEL_40"></feMergeNode>
+				<feMergeNode in="SourceGraphic"></feMergeNode>
+			</feMerge>
+			<!-- EXTRUDED BEVEL END -->
+		</filter>
+		</defs>
+	</svg>
+<?php endif; ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'evn' ); ?></a>
 
