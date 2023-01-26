@@ -283,9 +283,13 @@
     justify-content: center;
     align-items: center;
     background: transparent;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    left: 50%;
+    position: absolute;
+    top: 50%;
     transform: translate(-50%, -50%);
-    width: 10em;
-    height: 10em;
+    width: auto !important;
     z-index: 9999;
   }
   .parvus__loader::before {
@@ -293,14 +297,10 @@
     border-radius: 100%;
     border: 0.25rem solid var(--parvus-loader-background-color);
     border-top-color: var(--parvus-loader-color);
-    bottom: 0;
     content: "";
-    left: 8%;
-    position: absolute;
-    top: 8%;
     z-index: 9999;
-    width: 84%;
-    height: 84%;
+    width: 10em;
+    height: 10em;
   }
   .parvus__toolbar {
     align-items: center;
