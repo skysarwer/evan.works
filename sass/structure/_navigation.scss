@@ -83,6 +83,11 @@
 				background: $color__accent-dark;
 				color: white;
 
+				::selection, ::-moz-selection {
+					background: #fff;
+					color: $color__accent;
+				}
+
 				ul {
 					display: none;
 				}
@@ -101,6 +106,7 @@
 	li {
 		position: relative;
 		font-family: $font__semibold;
+		font-size: 1em;
 		margin-bottom: 0;
 		padding-bottom: 0.5em;
 		padding-top: 0.5em;
