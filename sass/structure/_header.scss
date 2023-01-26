@@ -80,6 +80,7 @@ header.site-header {
 
         &[aria-expanded="true"] {
             .nav-bar {
+                border-color: #000;
                 &:nth-child(2) {
                    // transform: rotate(45deg) scaleX(1.125);
                    // transform-origin: 8px 7px;
