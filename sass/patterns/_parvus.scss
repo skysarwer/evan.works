@@ -3,8 +3,8 @@
     --parvus-transition-timing-function: cubic-bezier(0.4, 0, 0.22, 1);
     --parvus-overlay-color: rgba(0, 17, 27, 0.925);
     --parvus-button-text: hsl(0, 0%, 100%);
-    --parvus-loader-background-color: $color__accent-light;
-    --parvus-loader-color: $color__accent;
+    --parvus-loader-background-color: #{$color__accent-light};
+    --parvus-loader-color: #{$color__accent};
   }
   
   /**
@@ -219,6 +219,7 @@
     flex-grow: 1;
     min-height: 0;
     overflow: auto;
+    min-width: 20%;
   }
 
   .parvus__content img {
