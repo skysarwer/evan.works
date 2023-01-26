@@ -279,19 +279,13 @@
     transition: var(--parvus-transition-duration);
   }
   .parvus__loader {
-    display: inline-block;
-    padding: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: transparent;
-    box-sizing: border-box !important;
-    overflow: visible !important;
-    height: 10em !important;
-    left: 50%;
-    position: absolute;
-    top: 50%;
     transform: translate(-50%, -50%);
-    width: 10em !important;
-    max-width: 10em;
-    max-height: 10em;
+    width: 10em;
+    height: 10em;
     z-index: 9999;
   }
   .parvus__loader::before {
