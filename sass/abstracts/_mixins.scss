@@ -18,14 +18,13 @@
 	@media screen and (min-width: 600px) { 
 		padding-left: $spacing__default-md;
 		padding-right: $spacing__default-md;
-		max-width: 150ch;
 	}
 	
 	@media screen and (min-width: 1100px) { 
 		padding-left: $spacing__default-lg;
 		padding-right: $spacing__default-lg;
 		margin: 0 auto;
-		max-width: 150ch;
+		max-width: 300ch;
 	}
 }
 
