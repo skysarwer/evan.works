@@ -61,7 +61,7 @@
 
     .desktop {
         width: 100%;
-
+        aspect-ratio: 1 / 0.45;
     }
 
     .tablet, .ipad {
@@ -70,6 +70,7 @@
         margin-top: -6em;
         z-index: 2;
         margin-left: 4em;
+        aspect-ratio: 1 / 1.33;
     }
 
     .mobile, .iphone {
@@ -79,5 +80,6 @@
         position: absolute;
         right: 22%;
         bottom: 5em;
+        aspect-ratio: 1 / 1.75;
     }
 }
